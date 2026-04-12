@@ -12,17 +12,20 @@ type Client = {
 const CLIENTS: Client[] = [
   {
     title: 'Landlords (1–10 Units)',
-    description: 'You\'re managing your own properties and want a simpler, more reliable way to upgrade and maintain units.',
+    description:
+      "You're managing your own properties and want a simpler, more reliable way to upgrade and maintain units.",
     href: '/#grr-cta',
   },
   {
     title: 'Property Managers',
-    description: 'You need fast, consistent execution without coordinating multiple vendors.',
+    description:
+      'You need fast, consistent execution without coordinating multiple vendors.',
     href: '/#grr-cta',
   },
   {
     title: 'Real Estate Investors',
-    description: 'You\'re focused on improving asset performance and long-term value.',
+    description:
+      "You're focused on improving asset performance and long-term value.",
     href: '/#grr-cta',
   },
 ];
@@ -37,7 +40,8 @@ export default function MetafiJobOpenings() {
             Built for the Independent Investor
           </h2>
           <p className="text-muted-foreground mt-4 text-base sm:text-lg">
-            Whether you own one unit or ten, we give you the same clarity and execution that institutional investors take for granted.
+            Whether you own one unit or ten, we give you the same clarity and
+            execution that institutional investors take for granted.
           </p>
         </div>
 
@@ -50,8 +54,12 @@ export default function MetafiJobOpenings() {
                 aria-label={client.title}
               >
                 <div>
-                  <h3 className="text-foreground text-xl font-medium sm:text-2xl">{client.title}</h3>
-                  <p className="text-muted-foreground mt-2 text-sm">{client.description}</p>
+                  <h3 className="text-foreground text-xl font-medium sm:text-2xl">
+                    {client.title}
+                  </h3>
+                  <p className="text-muted-foreground mt-2 text-sm">
+                    {client.description}
+                  </p>
                 </div>
                 <ArrowUpRight
                   className="text-logo-gray mt-1 h-5 w-5 flex-shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"

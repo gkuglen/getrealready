@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
+
 import { Button } from '@/components/ui/button';
+
 import { GridBackground } from '../ui/grid-background';
 
 const MetafiHero = () => {
@@ -29,13 +31,24 @@ const MetafiHero = () => {
             Upgrade Units. Optimize Rents. Increase Property Value.
           </h1>
           <p className="text-muted-foreground md:text-md mx-auto max-w-2xl text-base sm:text-lg">
-            We help landlords and property managers improve their units, align rents with the market, and maintain properties with a clear return on investment—without unnecessary upgrades or added complexity.
+            We help landlords and property managers improve their units, align
+            rents with the market, and maintain properties with a clear return
+            on investment—without unnecessary upgrades or added complexity.
           </p>
           <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-4">
-            <Button asChild className="w-full sm:w-auto" aria-label="Request a Property Review">
+            <Button
+              asChild
+              className="w-full sm:w-auto"
+              aria-label="Request a Property Review"
+            >
               <Link href="/#grr-cta">Request a Property Review</Link>
             </Button>
-            <Button asChild variant="outline" className="w-full sm:w-auto" aria-label="Send Us Your Unit">
+            <Button
+              asChild
+              variant="outline"
+              className="w-full sm:w-auto"
+              aria-label="Send Us Your Unit"
+            >
               <Link href="/#grr-cta">Send Us Your Unit</Link>
             </Button>
           </div>

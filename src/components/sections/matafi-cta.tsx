@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { Button } from '@/components/ui/button';
 
 const MetafiCta = () => {
@@ -25,7 +26,8 @@ const MetafiCta = () => {
         </ul>
 
         <p className="text-primary-foreground/70 mx-auto mt-4 max-w-2xl text-sm">
-          We review each unit individually—no automated reports, just clear, practical guidance.
+          We review each unit individually—no automated reports, just clear,
+          practical guidance.
         </p>
 
         <div className="mt-8 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">

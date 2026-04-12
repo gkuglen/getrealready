@@ -11,7 +11,8 @@ const MetafiTestimonials = () => {
           We Simplify the Process
         </h2>
         <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-center text-base font-normal sm:text-lg">
-          We handle the evaluation, upgrades, and ongoing maintenance—so you don't have to piece it together yourself.
+          We handle the evaluation, upgrades, and ongoing maintenance—so you
+          don't have to piece it together yourself.
         </p>
 
         <p className="text-foreground mx-auto mt-10 max-w-2xl text-center text-base font-medium sm:text-lg">
@@ -23,7 +24,10 @@ const MetafiTestimonials = () => {
             'Reliable execution without chasing contractors',
             'Upgrades tied to real rent outcomes',
           ].map((item) => (
-            <li key={item} className="bg-card text-foreground rounded-[16px] px-6 py-4 text-base font-normal">
+            <li
+              key={item}
+              className="bg-card text-foreground rounded-[16px] px-6 py-4 text-base font-normal"
+            >
               {item}
             </li>
           ))}
