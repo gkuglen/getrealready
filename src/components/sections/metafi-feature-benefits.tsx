@@ -14,22 +14,22 @@ const BENEFITS: Benefit[] = [
     title: 'Before Purchase',
     description:
       'Understand potential rent, renovation costs, and upside before you buy.',
-    iconSrc: '/images/features/bar.svg',
-    iconAlt: 'Bar chart icon',
+    iconSrc: '/images/features/sale.svg',
+    iconAlt: 'For Sale icon',
   },
   {
     title: 'During Ownership',
     description:
       'Improve units, reduce vacancy time, and maintain your property without the hassle.',
-    iconSrc: '/images/features/bell.svg',
-    iconAlt: 'Bell icon',
+    iconSrc: '/images/features/rent.svg',
+    iconAlt: 'For Rent icon',
   },
   {
     title: 'Before Sale',
     description:
       'Make targeted upgrades that increase value without over-investing.',
-    iconSrc: '/images/features/server.svg',
-    iconAlt: 'Controls icon',
+    iconSrc: '/images/features/sale.svg',
+    iconAlt: 'For Sale icon',
   },
 ];
 
@@ -52,13 +52,13 @@ export default function MetafiFeatureBenefits({
         <ul className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-3">
           {items.map(({ title, description, iconSrc, iconAlt }) => (
             <li key={title} className="text-start">
-              <div className="border-border-light shadow-soft mb-6 flex h-[44px] w-[44px] items-center justify-center rounded-[12px] border bg-white">
+              <div className="border-border-light shadow-soft mb-6 flex h-[100px] w-[100px] items-center justify-center rounded-[12px] border bg-white">
                 <Image
                   src={iconSrc}
                   alt={iconAlt || ''}
-                  width={24}
-                  height={24}
-                  className="h-6 w-6"
+                  width={90}
+                  height={90}
+                  className="h-16 w-16"
                   priority={false}
                 />
               </div>

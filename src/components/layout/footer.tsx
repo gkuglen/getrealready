@@ -47,11 +47,11 @@ export const Footer = () => {
           <div className="md:min-w-[160px]">
             <Link href="/" aria-label="Get Real Ready">
               <Image
-                src="/images/layout/grr.svg"
+                src="/images/layout/grr_wht.svg"
                 alt="Get Real Ready"
                 width={140}
                 height={32}
-                className="invert"
+                className=""
               />
             </Link>
             <p className="text-primary-foreground/50 mt-3 max-w-[200px] text-sm leading-snug">

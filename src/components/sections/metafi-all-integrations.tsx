@@ -20,7 +20,7 @@ const SERVICES: Service[] = [
       '3–7 day turnaround',
       'Fixed pricing options',
     ],
-    icon: '/images/homepage/integrations/shopify.svg',
+    icon: '/images/homepage/integrations/refresh.svg',
   },
   {
     name: 'Value-Add Renovations',
@@ -32,7 +32,7 @@ const SERVICES: Service[] = [
       'ROI-driven recommendations',
     ],
     note: 'We focus on practical improvements that align with your property and market.',
-    icon: '/images/homepage/integrations/stripe.svg',
+    icon: '/images/homepage/integrations/valueadd.svg',
   },
   {
     name: 'Ongoing Maintenance',
@@ -43,7 +43,7 @@ const SERVICES: Service[] = [
       'Preventative maintenance',
       'Optional monthly service plans',
     ],
-    icon: '/images/homepage/integrations/zapier.svg',
+    icon: '/images/homepage/integrations/refresh.svg',
   },
 ];
 
@@ -66,9 +66,9 @@ export default function MetafiAllIntegrations() {
                   <Image
                     src={svc.icon}
                     alt=""
-                    width={80}
-                    height={80}
-                    className="h-20 w-20 object-contain"
+                    width={100}
+                    height={100}
+                    className="h-125  w-125 object-contain"
                   />
                 </div>
                 <h3 className="text-foreground mt-4 text-2xl font-medium">

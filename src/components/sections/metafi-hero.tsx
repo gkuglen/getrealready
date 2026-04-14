@@ -55,7 +55,7 @@ const MetafiHero = () => {
         </div>
         <div className="mx-auto flex w-full max-w-[994px] items-center justify-center rounded-t-[16px] bg-white/20 shadow-[0_15px_80px_-1px_rgba(8,9,10,0.04)] backdrop-blur-[20px]">
           <Image
-            src="/images/homepage/hero/Dashboard.webp"
+            src="/images/homepage/hero/Dashboard.svg"
             alt="Get Real Ready property dashboard"
             width={994}
             height={707}

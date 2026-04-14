@@ -14,19 +14,19 @@ const HOW_IT_WORKS: IncludedItem[] = [
     title: '1. Analyze',
     description:
       'We evaluate your unit against local comps to identify missed rent potential.',
-    iconSrc: '/images/features/included/payments.svg',
+    iconSrc: '/images/features/included/analyze.svg',
   },
   {
     title: '2. Upgrade',
     description:
       'We execute fast, standardized renovations designed to improve rent performance—not just appearance.',
-    iconSrc: '/images/features/included/checkout.svg',
+    iconSrc: '/images/features/included/upgrade.svg',
   },
   {
     title: '3. Maintain',
     description:
       'We keep your units in top condition with ongoing maintenance and support.',
-    iconSrc: '/images/features/included/billing.svg',
+    iconSrc: '/images/features/included/maintain.svg',
   },
 ];
 
@@ -57,7 +57,7 @@ export default function MetafiFeaturesIncluded({
           {items.map((it) => (
             <li key={it.title} className="text-center">
               <div
-                className="border-border-light bg-card shadow-light mx-auto mb-4 flex h-[44px] w-[44px] items-center justify-center rounded-[12px] border"
+                className="border-border-light bg-card shadow-light mx-auto mb-4 flex h-[88px] w-[88px] items-center justify-center rounded-[12px] border"
                 aria-hidden
               >
                 <Image
@@ -65,7 +65,7 @@ export default function MetafiFeaturesIncluded({
                   alt={it.iconAlt || ''}
                   width={24}
                   height={24}
-                  className="h-6 w-6"
+                  className="h-8 w-8"
                 />
               </div>
               <h3 className="text-foreground mt-6 text-lg font-medium">
