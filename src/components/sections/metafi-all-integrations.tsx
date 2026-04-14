@@ -68,7 +68,7 @@ export default function MetafiAllIntegrations() {
                     alt=""
                     width={100}
                     height={100}
-                    className="h-125  w-125 object-contain"
+                    className="h-125 w-125 object-contain"
                   />
                 </div>
                 <h3 className="text-foreground mt-4 text-2xl font-medium">

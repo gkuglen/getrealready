@@ -4,11 +4,14 @@ import { Button } from '@/components/ui/button';
 
 const MetafiCta = () => {
   return (
-    <section id="grr-cta" className="bg-[#4D6CFA] relative overflow-hidden px-6">
+    <section
+      id="grr-cta"
+      className="relative overflow-hidden bg-[#4D6CFA] px-6"
+    >
       {/* dotted pattern */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(currentColor_1px,transparent_1px)] bg-[size:16px_16px] [color:oklch(1_0_89.88)] opacity-30" />
       {/* centered solid strip */}
-      <div className="bg-[#4D6CFA] pointer-events-none absolute top-0 left-1/2 h-full w-[500px] -translate-x-1/2" />
+      <div className="pointer-events-none absolute top-0 left-1/2 h-full w-[500px] -translate-x-1/2 bg-[#4D6CFA]" />
 
       <div className="relative container px-0 py-16 text-center sm:py-20 md:px-6 md:py-28">
         <h2 className="text-primary-foreground mx-auto max-w-4xl text-4xl leading-tight font-medium text-balance sm:text-5xl md:text-6xl">
