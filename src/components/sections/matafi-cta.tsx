@@ -1,6 +1,3 @@
-import Link from 'next/link';
-
-import { Button } from '@/components/ui/button';
 import { CalendlyButton } from '@/components/ui/calendly-button';
 
 const MetafiCta = () => {
@@ -16,35 +13,31 @@ const MetafiCta = () => {
 
       <div className="relative container px-0 py-16 text-center sm:py-20 md:px-6 md:py-28">
         <h2 className="text-primary-foreground mx-auto max-w-4xl text-4xl leading-tight font-medium text-balance sm:text-5xl md:text-6xl">
-          Want to understand what your unit could rent for?
+          See how your unit compares to higher-rent apartments nearby
         </h2>
 
-        <p className="text-primary-foreground/80 mx-auto mt-4 max-w-2xl text-base font-normal sm:text-lg">
-          We'll review your unit and provide:
+        <p className="text-primary-foreground/80 mx-auto mt-6 max-w-2xl text-base font-normal sm:text-lg">
+          In a 15-min review, you&apos;ll see:
         </p>
 
         <ul className="text-primary-foreground/90 mx-auto mt-4 max-w-md space-y-2 text-base sm:text-lg">
-          <li>• Estimated rent range based on local comps</li>
-          <li>• Suggested upgrades that could improve rent</li>
-          <li>• Rough renovation budget and expected impact</li>
+          <li>• Estimated rent range based on nearby comps</li>
+          <li>• What higher-performing units are doing differently</li>
+          <li>• Suggested upgrades and expected rent impact</li>
+          <li>• Rough renovation budget to reach the next level</li>
         </ul>
 
         <p className="text-primary-foreground/70 mx-auto mt-4 max-w-2xl text-sm">
-          We review each unit individually—no automated reports, just clear,
-          practical guidance.
+          No automated reports—just clear, practical guidance.
         </p>
 
-        <div className="mt-8 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
-          <CalendlyButton className="bg-primary-foreground text-tagline hover:bg-primary-foreground/90 h-12 w-full rounded-[12px] sm:w-auto" />
-          <Button
-            asChild
-            variant="ghost"
-            className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 h-12 w-full rounded-[12px] border bg-transparent sm:w-auto"
-          >
-            <Link href="mailto:gray@getrealready.com?subject=Unit Submission">
-              Send Us Your Unit
-            </Link>
-          </Button>
+        <div className="mt-8 flex flex-col items-center justify-center gap-3">
+          <CalendlyButton className="bg-primary-foreground text-tagline hover:bg-primary-foreground/90 h-12 w-full rounded-[12px] sm:w-auto">
+            See My Rent Potential
+          </CalendlyButton>
+          <p className="text-primary-foreground/60 text-sm italic">
+            Takes 15 minutes • No pressure • Just insights
+          </p>
         </div>
       </div>
     </section>
