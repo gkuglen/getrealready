@@ -32,7 +32,7 @@ const MetafiCta = () => {
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3">
-          <CalendlyButton className="bg-primary-foreground text-tagline hover:bg-primary-foreground/90 h-12 w-full rounded-[12px] sm:w-auto">
+          <CalendlyButton className="bg-primary-foreground text-tagline hover:bg-primary-foreground/90 w-full sm:w-auto">
             See My Rent Potential
           </CalendlyButton>
           <p className="text-primary-foreground/60 text-sm italic">

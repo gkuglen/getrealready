@@ -9,12 +9,14 @@ interface CalendlyButtonProps {
   className?: string;
   variant?: 'default' | 'outline' | 'ghost';
   children?: React.ReactNode;
+  onClick?: () => void;
 }
 
 export function CalendlyButton({
   className,
   variant = 'default',
   children = 'Request a Property Review',
+  onClick,
 }: CalendlyButtonProps) {
   function openCalendly() {
     const win = window as Window & {
@@ -26,7 +28,15 @@ export function CalendlyButton({
   }
 
   return (
-    <Button variant={variant} className={className} onClick={openCalendly}>
+    <Button
+      size="sm"
+      variant={variant}
+      className={className}
+      onClick={() => {
+        openCalendly();
+        onClick?.();
+      }}
+    >
       {children}
     </Button>
   );

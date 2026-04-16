@@ -1,7 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
-import { Button } from '@/components/ui/button';
 import { CalendlyButton } from '@/components/ui/calendly-button';
 import { GridBackground } from '@/components/ui/grid-background';
 
@@ -28,23 +26,14 @@ const MetafiHero = () => {
       <div className="relative container px-0 md:px-6">
         <div className="mx-auto grid max-w-4xl gap-6 py-14 text-center sm:py-16 md:gap-8 md:pt-24 md:pb-20">
           <h1 className="text-foreground text-4xl leading-tight font-medium tracking-tight text-balance sm:text-5xl md:text-[68px]">
-            Upgrade Units. Optimize Rents. Increase Property Value.
+            See how your unit compares to higher-rent apartments nearby
           </h1>
           <p className="text-muted-foreground md:text-md mx-auto max-w-2xl text-base sm:text-lg">
-            We help landlords and property managers improve their units, align
-            rents with the market, and maintain properties with a clear return
-            on investment—without unnecessary upgrades or added complexity.
+            Compare your unit to the market, identify rent upside, and see
+            what&apos;s driving higher rents—before investing in upgrades.
           </p>
-          <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-4">
-            <CalendlyButton className="w-full sm:w-auto" />
-            <Button
-              asChild
-              variant="outline"
-              className="w-full sm:w-auto"
-              aria-label="Send Us Your Unit"
-            >
-              <Link href="/#grr-cta">Send Us Your Unit</Link>
-            </Button>
+          <div className="mt-2 flex flex-col gap-3 sm:items-center sm:justify-center">
+            <CalendlyButton className="w-full sm:w-auto">See My Rent Potential</CalendlyButton>
           </div>
         </div>
         <div className="mx-auto flex w-full max-w-[994px] items-center justify-center rounded-t-[16px] bg-white/20 shadow-[0_15px_80px_-1px_rgba(8,9,10,0.04)] backdrop-blur-[20px]">

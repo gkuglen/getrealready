@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 
-import { Button } from '@/components/ui/button';
+import { CalendlyButton } from '@/components/ui/calendly-button';
 import { cn } from '@/lib/utils';
 
 import { ThemeToggle } from '../ui/theme-toggle';
@@ -103,11 +103,9 @@ const Navbar = () => {
 
         {/* Desktop right actions */}
         <div className="flex items-center gap-2.5">
-          <Link href="/#grr-cta" className="hidden sm:block lg:block">
-            <Button size="sm" variant="default">
-              Request Review
-            </Button>
-          </Link>
+          <CalendlyButton className="hidden sm:block lg:block">
+            See My Rent Potential
+          </CalendlyButton>
           <div className="lg:block">
             <ThemeToggle />
           </div>
@@ -189,11 +187,12 @@ const Navbar = () => {
                     ))}
                   </div>
                   <div className="mt-4 mb-6">
-                    <Link href="/#grr-cta" onClick={() => setIsMenuOpen(false)}>
-                      <Button className="w-full" size="sm" variant="default">
-                        Request Review
-                      </Button>
-                    </Link>
+                    <CalendlyButton
+                      className="w-full"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      See My Rent Potential
+                    </CalendlyButton>
                   </div>
                 </nav>
               </div>
