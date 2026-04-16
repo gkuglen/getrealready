@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
+import { CalendlyButton } from '@/components/ui/calendly-button';
 
 const MetafiCta = () => {
   return (
@@ -34,14 +35,7 @@ const MetafiCta = () => {
         </p>
 
         <div className="mt-8 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
-          <Button
-            asChild
-            className="bg-primary-foreground text-tagline hover:bg-primary-foreground/90 h-12 w-full rounded-[12px] sm:w-auto"
-          >
-            <Link href="mailto:gray@getrealready.com?subject=Property Review Request">
-              Request a Property Review
-            </Link>
-          </Button>
+          <CalendlyButton className="bg-primary-foreground text-tagline hover:bg-primary-foreground/90 h-12 w-full rounded-[12px] sm:w-auto" />
           <Button
             asChild
             variant="ghost"

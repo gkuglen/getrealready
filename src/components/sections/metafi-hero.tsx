@@ -2,8 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
-
-import { GridBackground } from '../ui/grid-background';
+import { CalendlyButton } from '@/components/ui/calendly-button';
+import { GridBackground } from '@/components/ui/grid-background';
 
 const MetafiHero = () => {
   return (
@@ -36,13 +36,7 @@ const MetafiHero = () => {
             on investment—without unnecessary upgrades or added complexity.
           </p>
           <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-4">
-            <Button
-              asChild
-              className="w-full sm:w-auto"
-              aria-label="Request a Property Review"
-            >
-              <Link href="/#grr-cta">Request a Property Review</Link>
-            </Button>
+            <CalendlyButton className="w-full sm:w-auto" />
             <Button
               asChild
               variant="outline"
