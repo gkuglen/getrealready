@@ -5,24 +5,23 @@ const MetafiTestimonials = () => {
     <section id="grr-simplify" className="bg-accent px-6 lg:px-0">
       <div className="container px-0 py-16 sm:py-20 md:px-6 md:py-28">
         <p className="text-tagline mb-4 text-center text-sm leading-tight font-normal sm:text-base">
-          Our Approach
+          How it Starts
         </p>
         <h2 className="text-foreground mx-auto max-w-4xl text-center text-3xl leading-tight font-medium tracking-tight text-balance sm:text-4xl md:text-5xl">
-          We Simplify the Process
+          Start With Clarity
         </h2>
         <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-center text-base font-normal sm:text-lg">
-          We handle the evaluation, upgrades, and ongoing maintenance—so you
-          don't have to piece it together yourself.
+          Before making upgrades or spending money, we help you understand how
+          your unit performs—and what&apos;s actually driving higher rents in
+          your market.
         </p>
 
-        <p className="text-foreground mx-auto mt-10 max-w-2xl text-center text-base font-medium sm:text-lg">
-          You get:
-        </p>
-        <ul className="mx-auto mt-4 max-w-xl space-y-3 text-center">
+        <ul className="mx-auto mt-8 max-w-xl space-y-3 text-center">
           {[
-            'Clear recommendations based on your market',
-            'Reliable execution without chasing contractors',
-            'Upgrades tied to real rent outcomes',
+            'Where your unit stands compared to similar apartments nearby',
+            'What higher-performing units are doing differently',
+            'How much rent upside may be achievable',
+            "Which upgrades are worth it—and which aren't",
           ].map((item) => (
             <li
               key={item}
@@ -34,7 +33,7 @@ const MetafiTestimonials = () => {
         </ul>
 
         <p className="text-muted-foreground mx-auto mt-10 max-w-2xl text-center text-base sm:text-lg">
-          Less guesswork. Less back-and-forth. Better outcomes.
+          Then, if it makes sense, we can help you execute.
         </p>
       </div>
     </section>

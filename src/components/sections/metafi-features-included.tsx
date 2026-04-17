@@ -11,29 +11,34 @@ type IncludedItem = {
 
 const HOW_IT_WORKS: IncludedItem[] = [
   {
-    title: '1. Analyze',
-    description:
-      'We evaluate your unit against local comps to identify missed rent potential.',
+    title: '1. Share Your Unit',
+    description: "Send an address or listing—we'll take it from there",
     iconSrc: '/images/features/included/analyze.svg',
   },
   {
-    title: '2. Upgrade',
+    title: '2. Compare to the Market',
     description:
-      'We execute fast, standardized renovations designed to improve rent performance—not just appearance.',
+      'We analyze your unit against higher-performing apartments nearby to identify rent gaps',
     iconSrc: '/images/features/included/upgrade.svg',
   },
   {
-    title: '3. Maintain',
+    title: '3. Get Clear Insight',
     description:
-      'We keep your units in top condition with ongoing maintenance and support.',
+      'We walk you through rent potential, what\u2019s driving higher rents, and which upgrades are worth it',
     iconSrc: '/images/features/included/maintain.svg',
+  },
+  {
+    title: '4. Decide What to Do Next',
+    description:
+      "Move forward with confidence—whether that's making targeted upgrades or holding as-is",
+    iconSrc: '/images/features/included/analyze.svg',
   },
 ];
 
 export default function MetafiFeaturesIncluded({
   overline = 'How It Works',
-  title = 'Three Steps, End to End',
-  subtitle = 'A simple, reliable process designed to improve your property without the complexity.',
+  title = 'A simple way to understand and improve your unit',
+  subtitle = 'If helpful, we can also support execution of the recommended upgrades.',
   items = HOW_IT_WORKS,
 }: {
   overline?: string;

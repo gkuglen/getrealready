@@ -37,11 +37,11 @@ export default function MetafiJobOpenings() {
         <div className="max-w-3xl">
           <p className="text-tagline text-sm sm:text-base">Who We Work With</p>
           <h2 className="text-foreground mt-4 text-3xl leading-tight font-medium tracking-tight sm:text-5xl">
-            Built for the Independent Investor
+            Landlords, Managers &amp; Investors
           </h2>
           <p className="text-muted-foreground mt-4 text-base sm:text-lg">
-            Whether you own one unit or ten, we give you the same clarity and
-            execution that institutional investors take for granted.
+            We work with property owners at every stage—from single-unit
+            landlords to active real estate investors.
           </p>
         </div>
 

@@ -14,7 +14,7 @@ const SERVICES: Service[] = [
   {
     name: 'Unit Turns & Refreshes',
     description:
-      'Fast, reliable make-ready services to minimize vacancy and get units back on market quickly.',
+      'Fast, reliable make-ready work to minimize vacancy and get units back on market quickly.',
     items: [
       'Paint, flooring, repairs',
       '3–7 day turnaround',
@@ -23,21 +23,21 @@ const SERVICES: Service[] = [
     icon: '/images/homepage/integrations/refresh.svg',
   },
   {
-    name: 'Value-Add Renovations',
+    name: 'Targeted Upgrades',
     description:
-      'Targeted upgrades designed to improve rent performance and property value.',
+      'Focused improvements designed to increase rent—not just update appearance.',
     items: [
       'Kitchen and bath upgrades',
-      'Flooring and lighting packages',
+      'Flooring and lighting improvements',
       'ROI-driven recommendations',
     ],
-    note: 'We focus on practical improvements that align with your property and market.',
+    note: 'Only the upgrades that align with your unit and market.',
     icon: '/images/homepage/integrations/valueadd.svg',
   },
   {
     name: 'Ongoing Maintenance',
     description:
-      'Simple, reliable maintenance to keep your property performing.',
+      'Optional support to keep your units performing consistently over time.',
     items: [
       'On-demand repairs',
       'Preventative maintenance',
@@ -55,8 +55,12 @@ export default function MetafiAllIntegrations() {
           Services
         </p>
         <h2 className="text-foreground text-center text-[40px] leading-tight font-medium tracking-tight md:text-[52px]">
-          Everything Your Property Needs
+          Execute the Right Improvements—When It Makes Sense
         </h2>
+        <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-center text-base sm:text-lg">
+          Once you understand your unit&apos;s rent potential, we can help
+          implement the improvements that actually move performance.
+        </p>
 
         <ul className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:mt-18 lg:grid-cols-3">
           {SERVICES.map((svc) => (
@@ -93,6 +97,40 @@ export default function MetafiAllIntegrations() {
             </li>
           ))}
         </ul>
+
+        {/* Example ROI */}
+        <div className="mx-auto mt-16 max-w-xl">
+          <p className="text-tagline mb-4 text-center text-sm leading-tight sm:text-base">
+            Example ROI
+          </p>
+          <p className="text-muted-foreground mb-6 text-center text-base sm:text-lg">
+            A simple way to think about it:
+          </p>
+          <ul className="bg-accent divide-border divide-y overflow-hidden rounded-[16px]">
+            {[
+              { label: 'Upgrade Cost', value: '$12,000' },
+              { label: 'Rent Improvement', value: '$300/month' },
+              { label: 'Annual Increase', value: '$3,600' },
+              { label: 'Estimated Value Created (5% cap)', value: '$72,000' },
+            ].map((row) => (
+              <li
+                key={row.label}
+                className="flex items-center justify-between px-6 py-4"
+              >
+                <span className="text-muted-foreground text-base">
+                  {row.label}
+                </span>
+                <span className="text-foreground text-base font-medium">
+                  {row.value}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-muted-foreground mt-4 text-center text-sm">
+            The goal isn&apos;t just to improve the unit—it&apos;s to improve
+            the asset.
+          </p>
+        </div>
       </div>
     </section>
   );

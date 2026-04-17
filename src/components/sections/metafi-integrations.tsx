@@ -1,24 +1,35 @@
 const MetafiIntegrations = () => {
   return (
     <>
-      {/* ── PROCESS: Owning Rental Property Shouldn't Feel Like a Second Job ── */}
+      {/* ── PROCESS: The Challenge ── */}
       <section id="grr-process" className="bg-background px-6 lg:px-0">
         <div className="container px-0 py-16 text-center sm:py-20 md:px-6 md:py-28">
+          <p className="text-tagline mb-4 text-sm leading-tight sm:text-base">
+            The Challenge
+          </p>
           <h2 className="text-foreground mx-auto max-w-3xl text-3xl leading-tight font-medium tracking-tight text-balance sm:text-4xl md:text-5xl">
-            Owning Rental Property Shouldn't Feel Like a Second Job
+            Managing Rentals Gets Harder Without Clear Direction
           </h2>
           <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-base sm:text-lg">
-            Managing a few units often turns into more work than expected.
+            Managing a few units often turns into more work than
+            expected—especially when you&apos;re making upgrade decisions
+            without a clear benchmark.
           </p>
-          <ul className="text-muted-foreground mx-auto mt-6 max-w-xl space-y-2 text-base sm:text-lg">
-            <li>• Coordinating repairs</li>
-            <li>• Figuring out what to upgrade (and what not to)</li>
-            <li>• Dealing with unreliable contractors</li>
-            <li>• Guessing whether improvements will actually increase rent</li>
+          <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-base sm:text-lg">
+            Many landlords end up:
+          </p>
+          <ul className="text-muted-foreground mx-auto mt-4 max-w-xl space-y-2 text-base sm:text-lg">
+            <li>• Handling repairs and upgrades themselves</li>
+            <li>• Guessing which improvements actually matter</li>
+            <li>• Dealing with inconsistent contractors</li>
+            <li>• Unsure if the investment will increase rent</li>
           </ul>
           <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-base sm:text-lg">
-            It adds up quickly. Most landlords don't need more complexity—they
-            need a simple, reliable way to improve their units and move on.
+            It adds up quickly.
+          </p>
+          <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-base sm:text-lg">
+            Without a clear way to compare your unit to the market, even simple
+            decisions become time-consuming and uncertain.
           </p>
         </div>
       </section>
@@ -30,17 +41,41 @@ const MetafiIntegrations = () => {
             What We Do
           </p>
           <h2 className="text-foreground mx-auto max-w-3xl text-3xl leading-tight font-medium tracking-tight text-balance sm:text-4xl md:text-5xl">
-            We focus on one thing: helping rental properties perform better.
+            See how your unit compares to the market—and what it takes to
+            improve its rent performance
           </h2>
           <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-base sm:text-lg">
-            Most renovations improve appearance. We focus on what actually
-            improves rent performance and long-term property value.
+            Most renovations focus on appearance. We focus on what actually
+            drives higher rents in your specific market.
           </p>
-          <ul className="text-muted-foreground mx-auto mt-6 max-w-xl space-y-2 text-base sm:text-lg">
-            <li>• Market-based rent analysis</li>
-            <li>• Standardized renovation packages</li>
-            <li>• Reliable execution and maintenance</li>
+          <ul className="mx-auto mt-8 max-w-xl space-y-4 text-left">
+            {[
+              {
+                title: 'Market Analysis',
+                desc: 'Evaluate your unit against nearby comps to identify rent gaps',
+              },
+              {
+                title: 'Performance Insight',
+                desc: 'Understand what higher-performing units are doing differently',
+              },
+              {
+                title: 'Targeted Upgrades',
+                desc: 'Focus only on improvements that are likely to increase rent and value',
+              },
+            ].map((item) => (
+              <li key={item.title} className="bg-accent rounded-[16px] p-6">
+                <h3 className="text-foreground text-lg font-medium">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground mt-1 text-base">
+                  {item.desc}
+                </p>
+              </li>
+            ))}
           </ul>
+          <p className="text-muted-foreground mx-auto mt-8 max-w-2xl text-base italic sm:text-lg">
+            Start with clarity. Then decide what&apos;s worth doing.
+          </p>
         </div>
       </section>
 
@@ -51,7 +86,7 @@ const MetafiIntegrations = () => {
             Why Get Real Ready
           </p>
           <h2 className="text-foreground mx-auto max-w-3xl text-3xl leading-tight font-medium tracking-tight text-balance sm:text-4xl md:text-5xl">
-            Built for Landlords. Backed by Data.
+            Built for Landlords
           </h2>
           <ul className="mx-auto mt-10 grid max-w-3xl gap-6 text-left sm:grid-cols-2">
             {[

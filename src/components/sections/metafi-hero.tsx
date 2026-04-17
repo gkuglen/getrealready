@@ -33,7 +33,9 @@ const MetafiHero = () => {
             what&apos;s driving higher rents—before investing in upgrades.
           </p>
           <div className="mt-2 flex flex-col gap-3 sm:items-center sm:justify-center">
-            <CalendlyButton className="w-full sm:w-auto">See My Rent Potential</CalendlyButton>
+            <CalendlyButton className="w-full sm:w-auto">
+              See My Rent Potential
+            </CalendlyButton>
           </div>
         </div>
         <div className="mx-auto flex w-full max-w-[994px] items-center justify-center rounded-t-[16px] bg-white/20 shadow-[0_15px_80px_-1px_rgba(8,9,10,0.04)] backdrop-blur-[20px]">
