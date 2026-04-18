@@ -4,7 +4,7 @@ const MetafiTestimonials = () => {
   return (
     <section id="grr-simplify" className="bg-accent px-6 lg:px-0">
       <div className="container px-0 py-16 sm:py-20 md:px-6 md:py-28">
-        <p className="text-tagline font-caveat mb-4 text-center text-xl leading-tight font-semibold sm:text-2xl">
+        <p className="text-tagline font-caveat mb-4 text-center text-xl leading-tight font-medium sm:text-2xl">
           How it Starts
         </p>
         <h2 className="text-foreground mx-auto max-w-4xl text-center text-3xl leading-tight font-medium tracking-tight text-balance sm:text-4xl md:text-6xl">

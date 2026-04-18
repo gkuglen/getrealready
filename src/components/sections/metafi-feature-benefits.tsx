@@ -41,7 +41,7 @@ export default function MetafiFeatureBenefits({
   return (
     <section id="grr-stages" className="bg-background px-6 lg:px-0">
       <div className="container px-0 py-12 sm:py-16 md:px-6 md:py-20">
-        <p className="text-tagline font-caveat mb-4 text-center text-xl font-semibold sm:text-2xl">
+        <p className="text-tagline font-caveat mb-4 text-center text-xl font-medium sm:text-2xl">
           When to Use This
         </p>
         <h2 className="text-foreground mx-auto mb-10 max-w-3xl text-center text-3xl leading-tight font-medium tracking-tight sm:text-4xl md:text-6xl">
@@ -54,8 +54,8 @@ export default function MetafiFeatureBenefits({
         </p>
         <ul className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-3">
           {items.map(({ title, description, iconSrc, iconAlt }) => (
-            <li key={title} className="text-start">
-              <div className="border-border-light shadow-soft mb-6 flex h-[100px] w-[100px] items-center justify-center rounded-[12px] border bg-white">
+            <li key={title} className="text-center">
+              <div className="border-border-light shadow-soft mx-auto mb-6 flex h-[100px] w-[100px] items-center justify-center rounded-[12px] border bg-white">
                 <Image
                   src={iconSrc}
                   alt={iconAlt || ''}

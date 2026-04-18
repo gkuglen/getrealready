@@ -96,7 +96,7 @@ export default function MetafiAllIntegrations() {
   return (
     <section id="grr-services" className="bg-background px-6 lg:px-0">
       <div className="container px-0 py-16 sm:py-20 md:px-6 md:py-24">
-        <p className="text-tagline font-caveat mb-4 text-center text-xl font-semibold sm:text-2xl">
+        <p className="text-tagline font-caveat mb-4 text-center text-xl font-medium sm:text-2xl">
           Services
         </p>
         <h2 className="text-foreground text-center text-4xl leading-tight font-medium tracking-tight md:text-6xl">

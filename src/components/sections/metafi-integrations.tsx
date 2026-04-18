@@ -4,7 +4,7 @@ const MetafiIntegrations = () => {
       {/* ── PROCESS: The Challenge ── */}
       <section id="grr-process" className="bg-background px-6 lg:px-0">
         <div className="container px-0 py-16 text-center sm:py-20 md:px-6 md:py-28">
-          <p className="text-tagline font-caveat mb-4 text-xl leading-tight font-semibold sm:text-2xl">
+          <p className="text-tagline font-caveat mb-4 text-xl leading-tight font-medium sm:text-2xl">
             The Challenge
           </p>
           <h2 className="text-foreground mx-auto max-w-3xl text-3xl leading-tight font-medium tracking-tight text-balance sm:text-4xl md:text-6xl">
@@ -18,7 +18,7 @@ const MetafiIntegrations = () => {
           <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-base sm:text-lg">
             Many landlords end up:
           </p>
-          <ul className="text-muted-foreground mx-auto mt-4 max-w-xl space-y-2 text-base sm:text-lg">
+          <ul className="text-muted-foreground mx-auto mt-4 max-w-xl space-y-2 text-left text-base sm:text-lg">
             <li>• Handling repairs and upgrades themselves</li>
             <li>• Guessing which improvements actually matter</li>
             <li>• Dealing with inconsistent contractors</li>
@@ -37,7 +37,7 @@ const MetafiIntegrations = () => {
       {/* ── WHAT WE DO ── */}
       <section id="grr-what-we-do" className="bg-background px-6 lg:px-0">
         <div className="container px-0 py-16 text-center sm:py-20 md:px-6 md:py-28">
-          <p className="text-tagline font-caveat mb-4 text-xl leading-tight font-semibold sm:text-2xl">
+          <p className="text-tagline font-caveat mb-4 text-xl leading-tight font-medium sm:text-2xl">
             What We Do
           </p>
           <h2 className="text-foreground mx-auto max-w-3xl text-3xl leading-tight font-medium tracking-tight text-balance sm:text-4xl md:text-6xl">
@@ -82,7 +82,7 @@ const MetafiIntegrations = () => {
       {/* ── WHY GET REAL READY + ROI ── */}
       <section id="grr-why" className="bg-background px-6 lg:px-0">
         <div className="container px-0 py-16 text-center sm:py-20 md:px-6 md:py-28">
-          <p className="text-tagline font-caveat mb-4 text-xl leading-tight font-semibold sm:text-2xl">
+          <p className="text-tagline font-caveat mb-4 text-xl leading-tight font-medium sm:text-2xl">
             Why Get Real Ready
           </p>
           <h2 className="text-foreground mx-auto max-w-3xl text-3xl leading-tight font-medium tracking-tight text-balance sm:text-4xl md:text-6xl">

@@ -50,7 +50,7 @@ export default function MetafiFeaturesIncluded({
     <section id="grr-how-it-works" className="bg-background px-6 lg:px-0">
       <div className="container px-0 py-16 sm:py-20 md:py-24">
         <div className="text-center">
-          <p className="text-tagline font-caveat text-xl font-semibold sm:text-2xl">
+          <p className="text-tagline font-caveat text-xl font-medium sm:text-2xl">
             {overline}
           </p>
           <h2 className="text-foreground mt-4 text-3xl leading-tight font-medium tracking-tight sm:text-5xl md:text-6xl">
