@@ -35,8 +35,10 @@ export default function MetafiJobOpenings() {
     <section id="grr-who" className="bg-background px-6 lg:px-0">
       <div className="container px-0 py-16 sm:py-20 md:px-6 md:py-24">
         <div className="max-w-3xl">
-          <p className="text-tagline text-sm sm:text-base">Who We Work With</p>
-          <h2 className="text-foreground mt-4 text-3xl leading-tight font-medium tracking-tight sm:text-5xl">
+          <p className="text-tagline font-caveat text-xl font-semibold sm:text-2xl">
+            Who We Work With
+          </p>
+          <h2 className="text-foreground mt-4 text-3xl leading-tight font-medium tracking-tight sm:text-5xl md:text-6xl">
             Landlords, Managers &amp; Investors
           </h2>
           <p className="text-muted-foreground mt-4 text-base sm:text-lg">

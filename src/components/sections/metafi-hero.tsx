@@ -25,7 +25,7 @@ const MetafiHero = () => {
 
       <div className="relative container px-0 md:px-6">
         <div className="mx-auto grid max-w-4xl gap-6 py-14 text-center sm:py-16 md:gap-8 md:pt-24 md:pb-20">
-          <h1 className="text-foreground text-4xl leading-tight font-medium tracking-tight text-balance sm:text-5xl md:text-[68px]">
+          <h1 className="text-foreground text-4xl leading-tight font-medium tracking-tight text-balance sm:text-5xl md:text-6xl">
             See how your unit compares to higher-rent apartments nearby
           </h1>
           <p className="text-muted-foreground md:text-md mx-auto max-w-2xl text-base sm:text-lg">

@@ -1,13 +1,18 @@
 'use client';
 
-import Image from 'next/image';
+import { ServiceImageSlider } from '@/components/ui/service-image-slider';
+
+type SlideImage = {
+  src: string;
+  label?: string;
+};
 
 type Service = {
   name: string;
   description: string;
   items: string[];
   note?: string;
-  icon: string;
+  images: SlideImage[];
 };
 
 const SERVICES: Service[] = [
@@ -20,7 +25,13 @@ const SERVICES: Service[] = [
       '3–7 day turnaround',
       'Fixed pricing options',
     ],
-    icon: '/images/homepage/integrations/refresh.svg',
+    images: [
+      {
+        src: '/images/services/optimized/15_turn_before.webp',
+        label: 'Before',
+      },
+      { src: '/images/services/optimized/15_turn_after.webp', label: 'After' },
+    ],
   },
   {
     name: 'Targeted Upgrades',
@@ -32,7 +43,36 @@ const SERVICES: Service[] = [
       'ROI-driven recommendations',
     ],
     note: 'Only the upgrades that align with your unit and market.',
-    icon: '/images/homepage/integrations/valueadd.svg',
+    images: [
+      {
+        src: '/images/services/optimized/15_ba_target_before.webp',
+        label: 'Before',
+      },
+      {
+        src: '/images/services/optimized/15_ba_target_during.webp',
+        label: 'During',
+      },
+      {
+        src: '/images/services/optimized/15_ba_target_after.webp',
+        label: 'After',
+      },
+      {
+        src: '/images/services/optimized/15_kit_target_before.webp',
+        label: 'Before',
+      },
+      {
+        src: '/images/services/optimized/15_kit_target_after.webp',
+        label: 'After',
+      },
+      {
+        src: '/images/services/optimized/49_target_bath_before.webp',
+        label: 'Before',
+      },
+      {
+        src: '/images/services/optimized/49_target_bath_after.webp',
+        label: 'After',
+      },
+    ],
   },
   {
     name: 'Ongoing Maintenance',
@@ -43,7 +83,12 @@ const SERVICES: Service[] = [
       'Preventative maintenance',
       'Optional monthly service plans',
     ],
-    icon: '/images/homepage/integrations/refresh.svg',
+    images: [
+      {
+        src: '/images/services/optimized/49_maint_beforeandafter.webp',
+        label: 'Before & After',
+      },
+    ],
   },
 ];
 
@@ -51,10 +96,10 @@ export default function MetafiAllIntegrations() {
   return (
     <section id="grr-services" className="bg-background px-6 lg:px-0">
       <div className="container px-0 py-16 sm:py-20 md:px-6 md:py-24">
-        <p className="text-tagline mb-4 text-center text-sm sm:text-base">
+        <p className="text-tagline font-caveat mb-4 text-center text-xl font-semibold sm:text-2xl">
           Services
         </p>
-        <h2 className="text-foreground text-center text-[40px] leading-tight font-medium tracking-tight md:text-[52px]">
+        <h2 className="text-foreground text-center text-4xl leading-tight font-medium tracking-tight md:text-6xl">
           Execute the Right Improvements—When It Makes Sense
         </h2>
         <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-center text-base sm:text-lg">
@@ -66,15 +111,7 @@ export default function MetafiAllIntegrations() {
           {SERVICES.map((svc) => (
             <li key={svc.name} className="h-full">
               <article className="bg-card border-border-light shadow-light h-full rounded-[16px] border p-4">
-                <div className="bg-accent flex h-[200px] w-full items-center justify-center rounded-[12px]">
-                  <Image
-                    src={svc.icon}
-                    alt=""
-                    width={100}
-                    height={100}
-                    className="h-125 w-125 object-contain"
-                  />
-                </div>
+                <ServiceImageSlider images={svc.images} />
                 <h3 className="text-foreground mt-4 text-2xl font-medium">
                   {svc.name}
                 </h3>

@@ -41,10 +41,10 @@ export default function MetafiFeatureBenefits({
   return (
     <section id="grr-stages" className="bg-background px-6 lg:px-0">
       <div className="container px-0 py-12 sm:py-16 md:px-6 md:py-20">
-        <p className="text-tagline mb-4 text-center text-sm sm:text-base">
+        <p className="text-tagline font-caveat mb-4 text-center text-xl font-semibold sm:text-2xl">
           When to Use This
         </p>
-        <h2 className="text-foreground mx-auto mb-10 max-w-3xl text-center text-3xl leading-tight font-medium tracking-tight sm:text-4xl md:text-5xl">
+        <h2 className="text-foreground mx-auto mb-10 max-w-3xl text-center text-3xl leading-tight font-medium tracking-tight sm:text-4xl md:text-6xl">
           Support at Any Stage of Ownership
         </h2>
         <p className="text-muted-foreground mx-auto mb-10 max-w-2xl text-center text-base sm:text-lg">

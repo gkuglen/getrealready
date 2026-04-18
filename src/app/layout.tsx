@@ -1,7 +1,7 @@
 import './globals.css';
 
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Caveat, Inter } from 'next/font/google';
 import Script from 'next/script';
 
 import { Footer } from '@/components/layout/footer';
@@ -12,6 +12,13 @@ const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
   variable: '--font-inter',
+  display: 'swap',
+});
+
+const caveat = Caveat({
+  subsets: ['latin'],
+  weight: ['500'],
+  variable: '--font-caveat',
   display: 'swap',
 });
 
@@ -68,7 +75,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`hmin-h-screen ${inter.variable} antialiased`}>
+      <body
+        className={`hmin-h-screen ${inter.variable} ${caveat.variable} antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
