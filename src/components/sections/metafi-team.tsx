@@ -66,33 +66,33 @@ export default function MetafiTeam({
 
 const DEFAULT_MEMBERS: TeamMember[] = [
   {
-    name: 'Darlene Robertson',
-    role: 'Co-Founder & CEO',
-    imageSrc: '/images/team/1.webp',
+    name: 'Gray Kuglen',
+    role: 'Working the job',
+    imageSrc: '/images/team/gray-1.webp',
   },
   {
-    name: 'Ralph Edwards',
-    role: 'Co-Founder & CTO',
-    imageSrc: '/images/team/2.webp',
+    name: 'Gray Kuglen',
+    role: 'Cabinet installation',
+    imageSrc: '/images/team/gray-2.webp',
   },
   {
-    name: 'Dianne Russell',
-    role: 'Engineering',
-    imageSrc: '/images/team/3.webp',
+    name: 'Gray Kuglen',
+    role: 'Framing work',
+    imageSrc: '/images/team/gray-3.webp',
   },
   {
-    name: 'Albert Flores',
-    role: 'Engineering',
-    imageSrc: '/images/team/4.webp',
+    name: 'Gray Kuglen',
+    role: 'Unit walkthroughs',
+    imageSrc: '/images/team/gray-4.webp',
   },
   {
-    name: 'Theresa Webb',
-    role: 'Human Resources',
-    imageSrc: '/images/team/5.webp',
+    name: 'Gray Kuglen',
+    role: 'On site',
+    imageSrc: '/images/team/gray-5.webp',
   },
   {
-    name: 'Robert Fox',
-    role: 'Growth',
-    imageSrc: '/images/team/6.webp',
+    name: 'Gray Kuglen',
+    role: 'Exterior repairs',
+    imageSrc: '/images/team/gray-6.webp',
   },
 ];

@@ -1,6 +1,14 @@
 import { CalendlyButton } from '@/components/ui/calendly-button';
 
-const MetafiCta = () => {
+type MetafiCtaProps = {
+  title?: string;
+  subtitle?: string;
+};
+
+const MetafiCta = ({
+  title = 'See how your unit compares to higher-rent apartments nearby',
+  subtitle,
+}: MetafiCtaProps) => {
   return (
     <section
       id="grr-cta"
@@ -13,23 +21,29 @@ const MetafiCta = () => {
 
       <div className="relative container px-0 py-16 text-center sm:py-20 md:px-6 md:py-28">
         <h2 className="text-primary-foreground mx-auto max-w-4xl text-4xl leading-tight font-medium text-balance sm:text-5xl md:text-6xl">
-          See how your unit compares to higher-rent apartments nearby
+          {title}
         </h2>
 
-        <p className="text-primary-foreground/80 mx-auto mt-6 max-w-2xl text-base font-normal sm:text-lg">
-          In a 15-min review, you&apos;ll see:
-        </p>
-
-        <ul className="text-primary-foreground/90 mx-auto mt-4 max-w-md space-y-2 text-base sm:text-lg">
-          <li>• Estimated rent range based on nearby comps</li>
-          <li>• What higher-performing units are doing differently</li>
-          <li>• Suggested upgrades and expected rent impact</li>
-          <li>• Rough renovation budget to reach the next level</li>
-        </ul>
-
-        <p className="text-primary-foreground/70 mx-auto mt-4 max-w-2xl text-sm">
-          No automated reports—just clear, practical guidance.
-        </p>
+        {subtitle ? (
+          <p className="text-primary-foreground/80 mx-auto mt-6 max-w-2xl text-base font-normal sm:text-lg">
+            {subtitle}
+          </p>
+        ) : (
+          <>
+            <p className="text-primary-foreground/80 mx-auto mt-6 max-w-2xl text-base font-normal sm:text-lg">
+              In a 15-min review, you&apos;ll see:
+            </p>
+            <ul className="text-primary-foreground/90 mx-auto mt-4 max-w-md space-y-2 text-base sm:text-lg">
+              <li>• Estimated rent range based on nearby comps</li>
+              <li>• What higher-performing units are doing differently</li>
+              <li>• Suggested upgrades and expected rent impact</li>
+              <li>• Rough renovation budget to reach the next level</li>
+            </ul>
+            <p className="text-primary-foreground/70 mx-auto mt-4 max-w-2xl text-sm">
+              No automated reports—just clear, practical guidance.
+            </p>
+          </>
+        )}
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3">
           <CalendlyButton className="bg-primary-foreground text-tagline hover:bg-primary-foreground/90 w-full sm:w-auto">

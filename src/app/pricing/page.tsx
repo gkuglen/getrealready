@@ -1,19 +1,11 @@
-import React from 'react';
-
 import MetafiCta from '@/components/sections/matafi-cta';
-import MetafiFaq from '@/components/sections/metafi-faq';
-import MetafiFeaturesIncluded from '@/components/sections/metafi-features-included';
-import MetafiPricingHero from '@/components/sections/metafi-pricing-hero';
+import PricingContent from '@/components/sections/pricing-content';
 
-const page = () => {
+export default function PricingPage() {
   return (
     <>
-      <MetafiPricingHero />
-      <MetafiFeaturesIncluded />
-      <MetafiFaq />
+      <PricingContent />
       <MetafiCta />
     </>
   );
-};
-
-export default page;
+}

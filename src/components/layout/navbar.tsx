@@ -13,10 +13,10 @@ import { ThemeToggle } from '../ui/theme-toggle';
 const HEADER_HEIGHT = 80;
 
 const ITEMS = [
-  { label: 'Home', href: '/#grr-hero' },
-  { label: 'Process', href: '/#grr-process' },
-  { label: 'What We Do', href: '/#grr-what-we-do' },
-  { label: 'How It Works', href: '/#grr-how-it-works' },
+  { label: 'How It Works', href: '/' },
+  { label: 'Results', href: '/results' },
+  { label: 'Pricing', href: '/pricing' },
+  { label: 'About', href: '/about' },
 ];
 
 const Navbar = () => {
@@ -90,15 +90,23 @@ const Navbar = () => {
 
         {/* Desktop nav links */}
         <nav className="hidden items-center justify-center gap-8 lg:flex">
-          {ITEMS.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {ITEMS.map((link) => {
+            const isActive = link.href === '/' ? pathname === '/' : pathname.startsWith(link.href);
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                className={cn(
+                  'text-sm font-medium transition-colors',
+                  isActive
+                    ? 'text-[#000] dark:text-white'
+                    : 'text-muted-foreground hover:text-foreground',
+                )}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Desktop right actions */}
@@ -175,16 +183,24 @@ const Navbar = () => {
                   )}
                 >
                   <div className="flex flex-col gap-6">
-                    {ITEMS.map((link) => (
-                      <Link
-                        key={link.label}
-                        href={link.href}
-                        className="text-muted-foreground text-lg tracking-[-0.36px]"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
+                    {ITEMS.map((link) => {
+                      const isActive = link.href === '/' ? pathname === '/' : pathname.startsWith(link.href);
+                      return (
+                        <Link
+                          key={link.label}
+                          href={link.href}
+                          className={cn(
+                            'text-lg tracking-[-0.36px] transition-colors',
+                            isActive
+                              ? 'text-[#000] dark:text-white font-medium'
+                              : 'text-muted-foreground',
+                          )}
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {link.label}
+                        </Link>
+                      );
+                    })}
                   </div>
                   <div className="mt-4 mb-6">
                     <CalendlyButton
