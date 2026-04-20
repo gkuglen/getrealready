@@ -14,15 +14,15 @@ const projects = [
     metrics: [
       { label: 'Rent Increase', value: '$410', change: '+14%', changeType: 'positive' as const },
       { label: 'Days on Market', value: '14', change: '-65%', changeType: 'positive' as const },
-      { label: 'Cash on Cash Return', value: '21.2%', change: '+8.4%', changeType: 'positive' as const },
-      { label: 'Asset Value', value: '$340K', change: '+$72K', changeType: 'positive' as const },
+      { label: 'Cash on Cash Return', value: '11%', change: '+8.4%', changeType: 'positive' as const },
+      { label: 'Asset Value', value: '$89,450', change: '5.5% CAP', changeType: 'positive' as const },
     ],
     changes: [
-      'Complete kitchen renovation with new cabinetry and countertops',
-      'Full living area refresh with new LVP flooring',
-      'Bathroom gut renovation with modern tile and fixtures',
-      'Fresh interior paint throughout',
-      'Updated lighting and electrical',
+      'Complete kitchen renovation with 40% new cabinetry and countertops, appliances and new dishwasher',
+      'Full flooring replacement throughout & living area refresh with new LVP flooring',
+      'Bathroom gut with coppery piping with modern tile and fixtures & storage ',
+      'Fresh interior paint throughout 1044 sqft unit',
+      'All new updated elecrical wiring and recessed lighting',
     ],
     images: [
       { id: '1', src: '/images/remodels/large/kitliv_large/kit1_before.webp', alt: 'Kitchen before', type: 'before' as const },
