@@ -17,7 +17,7 @@ export function MetricCard({
 }: MetricCardProps) {
   return (
     <div className={cn('rounded-lg bg-muted/50 p-5', className)}>
-      <p className="text-muted-foreground text-sm uppercase tracking-wide">
+      <p className="text-muted-foreground min-h-[2.5rem] text-xs uppercase leading-tight tracking-wide">
         {label}
       </p>
       <div className="mt-2 flex items-baseline gap-2">

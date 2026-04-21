@@ -8,8 +8,8 @@ export default function AboutPage() {
     <>
       <MetafiAboutHero
         overline="About"
-        title="Why This Exists"
-        subtitle="Many rental units leave rent on the table—not because of location, but because of how they compare to other units in the same market."
+        title="Why I Built This"
+        subtitle="I help rental property owners make better investment decisions—so every upgrade drives cash flow and long-term value."
         showCta={false}
         showImage={false}
       />

@@ -6,17 +6,17 @@ const columns = [
   {
     title: 'Navigate',
     links: [
-      { name: 'Home', href: '/#grr-hero' },
-      { name: 'Process', href: '/#grr-process' },
-      { name: 'What We Do', href: '/#grr-what-we-do' },
-      { name: 'How It Works', href: '/#grr-how-it-works' },
+      { name: 'How It Works', href: '/' },
+      { name: 'Results', href: '/results' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'About', href: '/about' },
     ],
   },
   {
     title: 'Services',
     links: [
       { name: 'Unit Turns & Refreshes', href: '/#grr-services' },
-      { name: 'Value-Add Renovations', href: '/#grr-services' },
+      { name: 'Targeted Upgrades', href: '/#grr-services' },
       { name: 'Ongoing Maintenance', href: '/#grr-services' },
     ],
   },
@@ -26,8 +26,6 @@ const columns = [
       { name: 'Request a Property Review', href: '/#grr-cta' },
       { name: 'Send Us Your Unit', href: '/#grr-cta' },
       { name: 'Email Us', href: 'mailto:gray@getrealready.com' },
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
     ],
   },
 ];

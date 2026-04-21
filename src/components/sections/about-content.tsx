@@ -165,10 +165,10 @@ export default function AboutContent() {
             example projects are available below.
           </p>
           <a
-            href="#"
+            href="/results"
             className="text-tagline mt-3 inline-block text-sm font-medium hover:underline"
           >
-            View case studies and walkthroughs →
+            View Example Results →
           </a>
         </section>
       </div>

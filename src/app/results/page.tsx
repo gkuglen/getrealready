@@ -12,17 +12,17 @@ const projects = [
     description: 'Full gut renovation across kitchen, living area, and bathroom',
     details: 'Multi-room • Completed 2023',
     metrics: [
-      { label: 'Rent Increase', value: '$410', change: '+14%', changeType: 'positive' as const },
-      { label: 'Days on Market', value: '14', change: '-65%', changeType: 'positive' as const },
-      { label: 'Cash on Cash Return', value: '11%', change: '+8.4%', changeType: 'positive' as const },
-      { label: 'Asset Value', value: '$89,450', change: '5.5% CAP', changeType: 'positive' as const },
+      { label: 'Rent Increase', value: '+$410', change: '+14%', changeType: 'positive' as const },
+      { label: 'Leased in', value: '14', change: 'DAYS', changeType: 'positive' as const },
+      { label: 'Annual Return (Cash-on-Cash)', value: '11%'/*, change: '+8.4%', changeType: 'positive' as const*/ },
+      { label: 'Estimated Value Created', value: '+$89.5k', change: '5.5% CAP', changeType: 'positive' as const },
     ],
     changes: [
-      'Complete kitchen renovation with 40% new cabinetry and countertops, appliances and new dishwasher',
-      'Full flooring replacement throughout & living area refresh with new LVP flooring',
-      'Bathroom gut with coppery piping with modern tile and fixtures & storage ',
-      'Fresh interior paint throughout 1044 sqft unit',
-      'All new updated elecrical wiring and recessed lighting',
+      'Complete kitchen renovation with 40% additional cabinet space and new countertops, plus two new appliances including a dishwasher installation',
+      'Full flooring upgrade throughout, with new LVP flooring in the kitchen, bedrooms, and living areas',
+      'Full bathroom remodel with new copper piping, modern tile and fixtures, and 50% additional storage',
+      'Fresh interior paint throughout the 1,044 sq ft unit',
+      'All-new updated electrical wiring and recessed lighting',
     ],
     images: [
       { id: '1', src: '/images/remodels/large/kitliv_large/kit1_before.webp', alt: 'Kitchen before', type: 'before' as const },
@@ -41,17 +41,16 @@ const projects = [
     description: 'Kitchen and bedroom upgrades targeting rent gap vs. nearby units',
     details: 'Kitchen + Bedroom • Completed 2022',
     metrics: [
-      { label: 'Rent Increase', value: '$450', change: '+32%', changeType: 'positive' as const },
-      { label: 'Days on Market', value: '12', change: '-58%', changeType: 'positive' as const },
-      { label: 'Cash on Cash Return', value: '18.4%', change: '+6.2%', changeType: 'positive' as const },
-      { label: 'Asset Value', value: '$285K', change: '+$47K', changeType: 'positive' as const },
+      { label: 'Rent Increase', value: '+$350', change: '+16.6%', changeType: 'positive' as const },
+      { label: 'Leased in', value: '32', change: 'DAYS', changeType: 'negative' as const },
+      { label: 'Annual Return (Cash-on-Cash)', value: '27%' /*, change: '+6.2%', changeType: 'positive' as const */ },
+      { label: 'Estimated Value Created', value: '+$76.3k', change: '5.5% CAP', changeType: 'positive' as const },
     ],
     changes: [
-      'Kitchen refresh with new countertops and updated fixtures',
-      'New cabinetry hardware and backsplash',
-      'Bedroom flooring replaced with LVP',
-      'Fresh paint throughout',
-      'Updated bedroom lighting',
+      'Kitchen remodel with 30% more cabinet space, new countertops, and updated fixtures',
+      'Light bathroom remodel with new tile, paint, and lighting',
+      'New LVP flooring throughout the apartment, with updated electrical wiring and lighting',
+      'Converted large bonus space into a second bedroom, including a new closet and doors',
     ],
     images: [
       { id: '1', src: '/images/remodels/med/kitchen_med/kit_1before.webp', alt: 'Kitchen before', type: 'before' as const },
@@ -69,16 +68,17 @@ const projects = [
     description: 'Targeted bathroom upgrade to close rent gap with minimal spend',
     details: 'Bathroom • Completed 2021',
     metrics: [
-      { label: 'Rent Increase', value: '$175', change: '+12%', changeType: 'positive' as const },
-      { label: 'Days on Market', value: '6', change: '-72%', changeType: 'positive' as const },
-      { label: 'Cash on Cash Return', value: '14.1%', change: '+3.8%', changeType: 'positive' as const },
-      { label: 'Asset Value', value: '$180K', change: '+$18K', changeType: 'positive' as const },
+      { label: 'Rent Increase', value: '$150', change: '+3%', changeType: 'positive' as const },
+      { label: 'Leased in', value: '61', change: 'DAYS', changeType: 'negative' as const },
+      { label: 'Annual Return (Cash-on-Cash)', value: '10%' /*, change: '+3.8%', changeType: 'positive' as const */},
+      { label: 'Estimated Value Created', value: '+$30k', change: '6% CAP', changeType: 'positive' as const },
     ],
     changes: [
-      'New vanity with updated fixtures',
+      'Full bathroom remodel with a new bath/shower, vanity, and updated fixtures',
+      'Half bathroom remodel',
       'Tile surround replacement',
-      'Fresh paint and updated mirror',
-      'New lighting fixture',
+      'Converted shower area to laundry, increasing livable space and adding a small office where the previous washer and dryer were located',
+      'New stackable washer and dryer',
     ],
     images: [
       { id: '1', src: '/images/remodels/light/ba_1before.webp', alt: 'Bathroom before', type: 'before' as const },
@@ -122,6 +122,11 @@ export default function ResultsPage() {
 
         {/* Gallery */}
         <RemodelGallery key={project.id} images={project.images} className="mb-10" aspect={project.id === 'light' ? 'portrait' : 'landscape'} />
+
+        {/* Investment Impact */}
+        <p className="text-tagline font-caveat text-xl font-medium sm:text-2xl mb-4 text-center">
+          Investment Impact
+        </p>
 
         {/* Metrics Grid */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">

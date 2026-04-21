@@ -1,14 +1,15 @@
 'use client';
 
 import { Check } from 'lucide-react';
+import Image from 'next/image';
 
 import { CalendlyButton } from '@/components/ui/calendly-button';
 
 const HOW_IT_WORKS = [
-  'Share basic details about your property',
-  'Receive a structured analysis and recommendations',
-  'Review potential rent and performance upside',
-  'Decide if and how you want to move forward',
+  { text: 'Share basic details about your property', icon: '/images/features/included/one.svg' },
+  { text: 'Receive a structured analysis and recommendations', icon: '/images/features/included/two.svg' },
+  { text: 'Review potential rent and performance upside', icon: '/images/features/included/three.svg' },
+  { text: 'Decide if and how you want to move forward', icon: '/images/features/included/four.svg' },
 ];
 
 export default function PricingContent() {
@@ -163,12 +164,12 @@ export default function PricingContent() {
           </h2>
           <ol className="mt-8 space-y-6">
             {HOW_IT_WORKS.map((step, i) => (
-              <li key={i} className="flex items-start gap-4">
-                <span className="bg-accent text-foreground flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-medium">
-                  {i + 1}
-                </span>
-                <p className="text-muted-foreground mt-1 text-sm leading-relaxed">
-                  {step}
+              <li key={i} className="flex items-center gap-4">
+                <div className="border-border-light bg-card shadow-light flex h-[80px] w-[80px] shrink-0 items-center justify-center rounded-[12px] border">
+                  <Image src={step.icon} alt="" width={80} height={80} className="h-[80px] w-[80px]" />
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {step.text}
                 </p>
               </li>
             ))}

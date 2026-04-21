@@ -11,24 +11,24 @@ type IncludedItem = {
 
 const HOW_IT_WORKS: IncludedItem[] = [
   {
-    title: '1. Share Your Unit',
+    title: 'Share Your Unit',
     description: "Send an address or listing—we'll take it from there",
     iconSrc: '/images/features/included/one.svg',
   },
   {
-    title: '2. Compare to the Market',
+    title: 'Compare to the Market',
     description:
       'We analyze your unit against higher-performing apartments nearby to identify rent gaps',
     iconSrc: '/images/features/included/two.svg',
   },
   {
-    title: '3. Get Clear Insight',
+    title: 'Get Clear Insight',
     description:
       'We walk you through rent potential, what\u2019s driving higher rents, and which upgrades are worth it',
     iconSrc: '/images/features/included/three.svg',
   },
   {
-    title: '4. Decide What to Do Next',
+    title: 'Decide What to Do Next',
     description:
       "Move forward with confidence—whether that's making targeted upgrades or holding as-is",
     iconSrc: '/images/features/included/four.svg',
@@ -60,19 +60,19 @@ export default function MetafiFeaturesIncluded({
             {subtitle}
           </p>
         </div>
-        <ul className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 md:mt-14 md:gap-x-8 md:gap-y-8">
+        <ul className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2 md:mt-14 md:gap-x-6 md:gap-y-6">
           {items.map((it) => (
             <li key={it.title} className="text-center">
               <div
-                className="border-border-light bg-card shadow-light mx-auto mb-4 flex h-[100px] w-[100px] items-center justify-center rounded-[12px] border"
+                className="border-border-light bg-card shadow-light mx-auto mb-4 flex h-[80px] w-[80px] items-center justify-center rounded-[12px] border"
                 aria-hidden
               >
                 <Image
                   src={it.iconSrc}
                   alt={it.iconAlt || ''}
-                  width={100}
-                  height={100}
-                  className="h-[100px] w-[100px]"
+                  width={80}
+                  height={80}
+                  className="h-[80px] w-[80px]"
                 />
               </div>
               <h3 className="text-foreground mt-6 text-lg font-medium">
