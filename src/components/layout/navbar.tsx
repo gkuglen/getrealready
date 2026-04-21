@@ -91,7 +91,10 @@ const Navbar = () => {
         {/* Desktop nav links */}
         <nav className="hidden items-center justify-center gap-8 lg:flex">
           {ITEMS.map((link) => {
-            const isActive = link.href === '/' ? pathname === '/' : pathname.startsWith(link.href);
+            const isActive =
+              link.href === '/'
+                ? pathname === '/'
+                : pathname.startsWith(link.href);
             return (
               <Link
                 key={link.label}
@@ -184,7 +187,10 @@ const Navbar = () => {
                 >
                   <div className="flex flex-col gap-6">
                     {ITEMS.map((link) => {
-                      const isActive = link.href === '/' ? pathname === '/' : pathname.startsWith(link.href);
+                      const isActive =
+                        link.href === '/'
+                          ? pathname === '/'
+                          : pathname.startsWith(link.href);
                       return (
                         <Link
                           key={link.label}
@@ -192,7 +198,7 @@ const Navbar = () => {
                           className={cn(
                             'text-lg tracking-[-0.36px] transition-colors',
                             isActive
-                              ? 'text-[#000] dark:text-white font-medium'
+                              ? 'font-medium text-[#000] dark:text-white'
                               : 'text-muted-foreground',
                           )}
                           onClick={() => setIsMenuOpen(false)}

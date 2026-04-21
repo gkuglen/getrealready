@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 
-
 const LOGOS = [
   { src: '/images/about/logos/aarp.svg', alt: 'AARP' },
   { src: '/images/about/logos/amazon.svg', alt: 'Amazon' },
@@ -47,7 +46,7 @@ export default function AboutContent() {
           </p>
           <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
             <div>
-              <h3 className="text-foreground text-xs font-semibold uppercase tracking-widest">
+              <h3 className="text-foreground text-xs font-semibold tracking-widest uppercase">
                 On the Real Estate Side
               </h3>
               <ul className="text-muted-foreground mt-4 space-y-3 text-sm leading-relaxed">
@@ -67,7 +66,7 @@ export default function AboutContent() {
               </ul>
             </div>
             <div>
-              <h3 className="text-foreground text-xs font-semibold uppercase tracking-widest">
+              <h3 className="text-foreground text-xs font-semibold tracking-widest uppercase">
                 On the Product &amp; Data Side
               </h3>
               <ul className="text-muted-foreground mt-4 space-y-3 text-sm leading-relaxed">
@@ -89,7 +88,7 @@ export default function AboutContent() {
           </div>
 
           {/* Company logos */}
-          <h3 className="mt-10 text-xs font-semibold uppercase tracking-widest text-foreground">
+          <h3 className="text-foreground mt-10 text-xs font-semibold tracking-widest uppercase">
             Previous Experience
           </h3>
           <div className="mt-4 grid grid-cols-5 gap-4">
@@ -100,7 +99,7 @@ export default function AboutContent() {
                   alt={logo.alt}
                   width={135}
                   height={68}
-                  className="h-auto w-auto max-h-[68px] max-w-[135px] opacity-50 grayscale"
+                  className="h-auto max-h-[68px] w-auto max-w-[135px] opacity-50 grayscale"
                 />
               </div>
             ))}
@@ -172,7 +171,6 @@ export default function AboutContent() {
           </a>
         </section>
       </div>
-
     </div>
   );
 }

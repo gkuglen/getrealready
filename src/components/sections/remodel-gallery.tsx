@@ -18,7 +18,11 @@ interface RemodelGalleryProps {
   aspect?: 'landscape' | 'portrait';
 }
 
-export function RemodelGallery({ images, className, aspect = 'landscape' }: RemodelGalleryProps) {
+export function RemodelGallery({
+  images,
+  className,
+  aspect = 'landscape',
+}: RemodelGalleryProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () =>
@@ -30,7 +34,14 @@ export function RemodelGallery({ images, className, aspect = 'landscape' }: Remo
 
   return (
     <div className={cn('relative w-full', className)}>
-      <div className={cn('relative w-full overflow-hidden rounded-2xl bg-muted', aspect === 'portrait' ? 'aspect-[3/4] max-w-sm mx-auto' : 'aspect-[4/3]')}>
+      <div
+        className={cn(
+          'bg-muted relative w-full overflow-hidden rounded-2xl',
+          aspect === 'portrait'
+            ? 'mx-auto aspect-[3/4] max-w-sm'
+            : 'aspect-[4/3]',
+        )}
+      >
         <img
           src={currentImage.src}
           alt={currentImage.alt}
@@ -38,25 +49,29 @@ export function RemodelGallery({ images, className, aspect = 'landscape' }: Remo
         />
 
         <div className="absolute top-4 left-1/2 -translate-x-1/2">
-          <span className="inline-flex items-center rounded-full bg-white/50 px-6 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm">
-            {currentImage.type === 'before' ? 'Before' : currentImage.type === 'during' ? 'During' : 'After'}
+          <span className="text-foreground inline-flex items-center rounded-full bg-white/50 px-6 py-2.5 text-sm font-medium backdrop-blur-sm">
+            {currentImage.type === 'before'
+              ? 'Before'
+              : currentImage.type === 'during'
+                ? 'During'
+                : 'After'}
           </span>
         </div>
 
         <button
           onClick={goToPrevious}
-          className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-background/80 p-2 backdrop-blur-sm transition-colors hover:bg-background"
+          className="bg-background/80 hover:bg-background absolute top-1/2 left-4 -translate-y-1/2 rounded-full p-2 backdrop-blur-sm transition-colors"
           aria-label="Previous image"
         >
-          <ChevronLeft className="h-5 w-5 text-foreground" />
+          <ChevronLeft className="text-foreground h-5 w-5" />
         </button>
 
         <button
           onClick={goToNext}
-          className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-background/80 p-2 backdrop-blur-sm transition-colors hover:bg-background"
+          className="bg-background/80 hover:bg-background absolute top-1/2 right-4 -translate-y-1/2 rounded-full p-2 backdrop-blur-sm transition-colors"
           aria-label="Next image"
         >
-          <ChevronRight className="h-5 w-5 text-foreground" />
+          <ChevronRight className="text-foreground h-5 w-5" />
         </button>
       </div>
 
@@ -68,8 +83,8 @@ export function RemodelGallery({ images, className, aspect = 'landscape' }: Remo
             className={cn(
               'h-2 rounded-full transition-all',
               index === currentIndex
-                ? 'w-6 bg-foreground'
-                : 'w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50',
+                ? 'bg-foreground w-6'
+                : 'bg-muted-foreground/30 hover:bg-muted-foreground/50 w-2',
             )}
             aria-label={`Go to image ${index + 1}`}
           />

@@ -1,8 +1,8 @@
 'use client';
 
+import { Linkedin } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Linkedin } from 'lucide-react';
 
 const PHOTOS = [
   '/images/about/gray/IMG_0721.webp',
@@ -16,12 +16,14 @@ export default function AboutPhotoGrid() {
     <section className="bg-accent px-6 py-16 sm:py-20 lg:px-0">
       <div className="container px-0 md:px-6">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:gap-10">
-
           {/* 2x2 photo grid */}
           <div className="shrink-0">
             <div className="grid grid-cols-2 gap-2">
               {PHOTOS.map((src, i) => (
-                <div key={i} className="relative h-[180px] w-[180px] overflow-hidden rounded-[12px]">
+                <div
+                  key={i}
+                  className="relative h-[180px] w-[180px] overflow-hidden rounded-[12px]"
+                >
                   <Image
                     src={src}
                     alt=""

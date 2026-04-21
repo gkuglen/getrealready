@@ -1,6 +1,6 @@
-import MetafiCta from '@/components/sections/matafi-cta';
 import AboutContent from '@/components/sections/about-content';
 import AboutPhotoGrid from '@/components/sections/about-photo-grid';
+import MetafiCta from '@/components/sections/matafi-cta';
 import MetafiAboutHero from '@/components/sections/metafi-about-hero';
 
 export default function AboutPage() {

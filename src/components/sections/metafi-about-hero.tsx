@@ -33,7 +33,9 @@ export default function MetafiAboutHero({
       <div className="container px-0 md:px-6">
         <div className="relative overflow-hidden">
           <div className="mx-auto max-w-4xl px-6 py-14 text-center sm:px-8 sm:py-18 md:py-20">
-            <p className="text-tagline font-caveat text-xl font-medium sm:text-2xl">{overline}</p>
+            <p className="text-tagline font-caveat text-xl font-medium sm:text-2xl">
+              {overline}
+            </p>
 
             <h1 className="text-foreground mt-4 text-4xl leading-tight font-medium tracking-tight text-balance sm:text-5xl md:text-[68px]">
               {title}
