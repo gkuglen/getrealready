@@ -3,7 +3,10 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Caveat, Inter } from 'next/font/google';
 import Script from 'next/script';
+import { Suspense } from 'react';
 
+import { AnalyticsPageview } from '@/components/analytics/analytics-pageview';
+import { GoogleAnalytics } from '@/components/analytics/google-analytics';
 import { Footer } from '@/components/layout/footer';
 import Navbar from '@/components/layout/navbar';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -93,6 +96,10 @@ export default function RootLayout({
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="lazyOnload"
         />
+        <GoogleAnalytics />
+        <Suspense fallback={null}>
+          <AnalyticsPageview />
+        </Suspense>
       </body>
     </html>
   );
