@@ -32,9 +32,9 @@ const MetafiRentReadyPanel = () => {
         </div>
 
         <div className="flex flex-col gap-5">
-          <article className="group text-primary-foreground flex min-h-[460px] w-full flex-col justify-between overflow-hidden bg-[var(--grr-blue)] px-7 py-9 shadow-sm transition-transform duration-300 hover:-translate-y-1 sm:px-12 sm:py-12 lg:px-20">
+          <article className="group flex min-h-[460px] w-full flex-col justify-between overflow-hidden bg-[var(--grr-pink)] px-7 py-9 text-[var(--grr-charcoal)] shadow-sm transition-transform duration-300 hover:-translate-y-1 sm:px-12 sm:py-12 lg:px-20">
             <div className="flex items-start justify-between">
-              <span className="bg-primary-foreground/15 inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium uppercase">
+              <span className="bg-[var(--grr-charcoal)]/10 inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium uppercase">
                 <CircleDot className="size-3.5" /> {message.eyebrow}
               </span>
               <ArrowUpRight className="size-6 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
@@ -113,9 +113,9 @@ const MetafiRentReadyPanel = () => {
               <p className="text-primary-foreground/65 mt-3 text-sm leading-6">
                 {message.description}
               </p>
-              <Button
+<Button
                 asChild
-                className="mt-7 w-full bg-[var(--grr-pink)] text-[var(--grr-charcoal)] hover:bg-[var(--grr-pink)]/90 sm:w-auto"
+                className="mt-7 w-full bg-[var(--grr-blue)] text-primary-foreground hover:bg-[var(--grr-blue)]/90 sm:w-auto"
               >
                 <Link href="/tool">
                   {message.cta}
