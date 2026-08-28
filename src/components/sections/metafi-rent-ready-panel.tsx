@@ -20,12 +20,9 @@ const message = {
 
 const MetafiRentReadyPanel = () => {
   return (
-    <section
-      id="grr-rent-ready"
-      className="bg-muted w-full px-6 py-16 lg:px-0 lg:py-24"
-    >
-      <div className="container flex flex-col gap-10 px-0 md:px-6">
-        <div className="max-w-xl">
+    <section id="grr-rent-ready" className="bg-muted w-full py-16 lg:py-24">
+      <div className="flex flex-col gap-10">
+        <div className="max-w-xl px-6 md:px-12 lg:px-20">
           <p className="text-muted-foreground text-xs font-medium tracking-[0.18em] uppercase">
             Three launch directions
           </p>
@@ -34,8 +31,8 @@ const MetafiRentReadyPanel = () => {
           </h2>
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-3">
-          <article className="group text-primary-foreground flex min-h-[430px] flex-col justify-between overflow-hidden rounded-[2rem] bg-[var(--grr-blue)] p-7 shadow-sm transition-transform duration-300 hover:-translate-y-1 sm:p-9">
+        <div className="flex flex-col gap-5">
+          <article className="group text-primary-foreground flex min-h-[460px] w-full flex-col justify-between overflow-hidden bg-[var(--grr-blue)] px-7 py-9 shadow-sm transition-transform duration-300 hover:-translate-y-1 sm:px-12 sm:py-12 lg:px-20">
             <div className="flex items-start justify-between">
               <span className="bg-primary-foreground/15 inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium uppercase">
                 <CircleDot className="size-3.5" /> {message.eyebrow}
@@ -65,7 +62,7 @@ const MetafiRentReadyPanel = () => {
             </div>
           </article>
 
-          <article className="flex min-h-[430px] flex-col justify-between overflow-hidden rounded-[2rem] border border-[var(--grr-charcoal)]/15 bg-[var(--grr-green)] p-7 text-[var(--grr-charcoal)] shadow-sm sm:p-9">
+          <article className="flex min-h-[460px] w-full flex-col justify-between overflow-hidden border border-[var(--grr-charcoal)]/15 bg-[var(--grr-green)] px-7 py-9 text-[var(--grr-charcoal)] shadow-sm sm:px-12 sm:py-12 lg:px-20">
             <div className="flex items-center justify-between">
               <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.16em] uppercase">
                 <span className="size-2 rounded-full bg-[var(--grr-pink)]" />{' '}
@@ -96,7 +93,7 @@ const MetafiRentReadyPanel = () => {
             </div>
           </article>
 
-          <article className="text-primary-foreground flex min-h-[430px] flex-col justify-between overflow-hidden rounded-[2rem] bg-[var(--grr-charcoal)] p-7 shadow-sm sm:p-9">
+          <article className="text-primary-foreground flex min-h-[460px] w-full flex-col justify-between overflow-hidden bg-[var(--grr-charcoal)] px-7 py-9 shadow-sm sm:px-12 sm:py-12 lg:px-20">
             <div className="border-primary-foreground/20 flex items-center justify-between border-b pb-5">
               <span className="text-xs font-medium tracking-[0.18em] uppercase">
                 Oakland / 2026
