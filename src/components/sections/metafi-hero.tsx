@@ -1,8 +1,5 @@
 import Image from 'next/image';
 
-import { CalendlyButton } from '@/components/ui/calendly-button';
-import { GridBackground } from '@/components/ui/grid-background';
-
 const MetafiHero = () => {
   return (
     <section
@@ -18,7 +15,7 @@ const MetafiHero = () => {
             priority
             className="object-cover opacity-30"
           />
-          <GridBackground className="[background-size:calc(var(--square-size,64px))_calc(var(--square-size,64px))]" />
+          <div className="absolute inset-0 bg-[radial-gradient(currentColor_1px,transparent_1px)] bg-[size:16px_16px] [color:#F76F8E] opacity-20" />
           <div className="from-background to-background/0 absolute inset-x-0 top-0 h-40 bg-gradient-to-b" />
         </div>
       </div>
@@ -32,22 +29,6 @@ const MetafiHero = () => {
             Compare your unit to the market, identify rent upside, and see
             what&apos;s driving higher rents—before investing in upgrades.
           </p>
-          <div className="mt-2 flex flex-col gap-3 sm:items-center sm:justify-center">
-            <CalendlyButton className="w-full sm:w-auto">
-              See My Rent Potential
-            </CalendlyButton>
-          </div>
-        </div>
-        <div className="mx-auto flex w-full max-w-[994px] items-center justify-center rounded-t-[16px] bg-white/20 shadow-[0_15px_80px_-1px_rgba(8,9,10,0.04)] backdrop-blur-[20px]">
-          <Image
-            src="/images/homepage/hero/Dashboard.svg"
-            alt="Get Real Ready property dashboard"
-            width={994}
-            height={707}
-            priority
-            sizes="(max-width: 1024px) 100vw, 994px"
-            className="h-auto w-full rounded-t-[16px] object-cover object-top"
-          />
         </div>
       </div>
     </section>

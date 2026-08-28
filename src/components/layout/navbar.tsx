@@ -1,5 +1,6 @@
 'use client';
 
+import { Calendar } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -114,8 +115,9 @@ const Navbar = () => {
 
         {/* Desktop right actions */}
         <div className="flex items-center gap-2.5">
-          <CalendlyButton className="hidden sm:block lg:block">
-            See My Rent Potential
+          <CalendlyButton className="hidden bg-[#32322C] text-white hover:bg-[#32322C]/90 sm:flex lg:flex">
+            <Calendar className="size-4" />
+            Talk with Gray
           </CalendlyButton>
           <div className="lg:block">
             <ThemeToggle />
@@ -210,10 +212,11 @@ const Navbar = () => {
                   </div>
                   <div className="mt-4 mb-6">
                     <CalendlyButton
-                      className="w-full"
+                      className="w-full bg-[#32322C] text-white hover:bg-[#32322C]/90"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      See My Rent Potential
+                      <Calendar className="size-4" />
+                      Talk with Gray
                     </CalendlyButton>
                   </div>
                 </nav>

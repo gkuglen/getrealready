@@ -1,3 +1,5 @@
+import { Calendar } from 'lucide-react';
+
 import { CalendlyButton } from '@/components/ui/calendly-button';
 
 type MetafiCtaProps = {
@@ -46,8 +48,9 @@ const MetafiCta = ({
         )}
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3">
-          <CalendlyButton className="bg-primary-foreground text-tagline hover:bg-primary-foreground/90 w-full sm:w-auto">
-            See My Rent Potential
+          <CalendlyButton className="w-full bg-[#32322C] text-white hover:bg-[#32322C]/90 sm:w-auto">
+            <Calendar className="size-4" />
+            Talk with Gray
           </CalendlyButton>
           <p className="text-primary-foreground/60 text-sm italic">
             Takes 15 minutes • No pressure • Just insights
