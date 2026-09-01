@@ -69,41 +69,45 @@ export function CityNotifyModal({
   return (
     <div
       onClick={onClose}
-      className="fixed inset-0 z-[1000] flex items-center justify-center bg-[#32322C]/55 p-[30px]"
+      className="fixed inset-0 z-[1000] flex items-center justify-center bg-[#32322C]/55 p-4 sm:p-[30px]"
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative flex w-full max-w-[630px] flex-col gap-6 rounded-[30px] bg-white p-12 sm:p-[60px]"
+        // max-h + overflow-y-auto: on a short mobile viewport (especially
+        // with the on-screen keyboard open) this card can be taller than
+        // the visible screen — without its own scroll, the CTA at the
+        // bottom becomes unreachable rather than just off-screen.
+        className="relative flex max-h-[90vh] w-full max-w-[630px] flex-col gap-4 overflow-y-auto rounded-[24px] bg-white p-6 sm:gap-6 sm:rounded-[30px] sm:p-12 md:p-[60px]"
       >
         <button
           type="button"
           onClick={onClose}
           aria-label="Close"
-          className="absolute top-6 right-6 text-[30px] leading-none text-[#8a8a80] transition-colors hover:text-[#32322C]"
+          className="absolute top-4 right-4 text-2xl leading-none text-[#8a8a80] transition-colors hover:text-[#32322C] sm:top-6 sm:right-6 sm:text-[30px]"
         >
           ×
         </button>
-        <span className="text-lg font-semibold text-[#F76F8E]">
+        <span className="text-sm font-semibold text-[#F76F8E] sm:text-lg">
           Coming soon
         </span>
-        <h3 className="text-4xl leading-tight font-extrabold text-[#32322C]">
+        <h3 className="pr-6 text-2xl leading-tight font-extrabold text-[#32322C] sm:pr-0 sm:text-4xl">
           Get notified when we launch in your city
         </h3>
-        <p className="text-[22px] leading-relaxed text-[#5a5a52]">
+        <p className="text-sm leading-relaxed text-[#5a5a52] sm:text-[22px]">
           Leave your email and we&apos;ll let you know when Get Rent Ready
           expands to other Bay Area cities.
         </p>
         {status === 'success' ? (
-          <div className="rounded-[18px] bg-[#D2E0BF] p-6 text-center text-[22px] font-semibold text-[#32322C]">
+          <div className="rounded-[18px] bg-[#D2E0BF] p-4 text-center text-base font-semibold text-[#32322C] sm:p-6 sm:text-[22px]">
             You&apos;re on the list — we&apos;ll be in touch.
           </div>
         ) : (
           <>
-            <div className="flex flex-col gap-3">
-              <span className="text-lg font-semibold text-[#32322C]">
+            <div className="flex flex-col gap-2 sm:gap-3">
+              <span className="text-sm font-semibold text-[#32322C] sm:text-lg">
                 Which cities are you interested in?
               </span>
-              <div className="flex flex-wrap gap-2.5">
+              <div className="flex flex-wrap gap-2 sm:gap-2.5">
                 {BAY_AREA_CITIES.map((city) => {
                   const active = selectedCities.includes(city);
                   return (
@@ -112,7 +116,7 @@ export function CityNotifyModal({
                       type="button"
                       onClick={() => toggleCity(city)}
                       aria-pressed={active}
-                      className={`rounded-full border px-4 py-2 text-base font-medium transition-colors ${
+                      className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors sm:px-4 sm:py-2 sm:text-base ${
                         active
                           ? 'border-[#4D6CFA] bg-[#4D6CFA] text-white'
                           : 'border-[#ddd] bg-[#F0EDE5] text-[#32322C] hover:bg-[#e5e0d3]'
@@ -124,19 +128,19 @@ export function CityNotifyModal({
                 })}
               </div>
             </div>
-            <form onSubmit={handleSubmit} className="flex gap-[15px]">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-2.5 sm:flex-row sm:gap-[15px]">
               <Input
                 type="email"
                 required
                 placeholder="you@email.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="h-[66px] flex-1 rounded-[15px] px-[18px] text-lg"
+                className="h-12 flex-1 rounded-[15px] px-[18px] text-base sm:h-[66px] sm:text-lg"
               />
               <Button
                 type="submit"
                 disabled={status === 'loading'}
-                className="h-[66px] shrink-0 rounded-[15px] bg-[#4D6CFA] text-lg text-white hover:bg-[#3D5CE8]"
+                className="h-12 shrink-0 rounded-[15px] bg-[#4D6CFA] text-base text-white hover:bg-[#3D5CE8] sm:h-[66px] sm:text-lg"
               >
                 {status === 'loading' ? 'Sending…' : 'Notify me'}
               </Button>
@@ -144,7 +148,7 @@ export function CityNotifyModal({
           </>
         )}
         {status === 'error' && (
-          <p className="text-lg text-red-500">
+          <p className="text-sm text-red-500 sm:text-lg">
             Something went wrong — please try again.
           </p>
         )}
