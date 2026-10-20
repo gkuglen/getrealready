@@ -101,6 +101,13 @@ export const Footer = () => {
             ))}
           </div>
         </div>
+
+        {/* A bare JSX attribute like google-add-preferred-source-btn resolves
+            to boolean true, which React silently strips from a plain <div>
+            since it isn't a recognized DOM attribute — confirmed on the
+            getrentready repo's equivalent change. An explicit "" value is
+            treated as a normal string attribute and passes through as-is. */}
+        <div google-add-preferred-source-btn="" />
       </div>
     </footer>
   );
