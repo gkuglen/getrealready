@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-import { LIVE_CITIES, listCities } from '@/lib/live-cities';
+import { listCities, LIVE_CITIES } from '@/lib/live-cities';
 
 // Why pricing at turnover matters: in rent-controlled cities the move-in rent
 // becomes the base every capped annual increase builds on. The chart shows
@@ -78,11 +78,17 @@ function TurnoverChart() {
         aria-hidden="true"
       >
         <span className="flex items-center gap-2">
-          <span className="h-0.5 w-4 rounded-full" style={{ background: RIGHT_COLOR }} />
+          <span
+            className="h-0.5 w-4 rounded-full"
+            style={{ background: RIGHT_COLOR }}
+          />
           Priced to market at turnover
         </span>
         <span className="flex items-center gap-2">
-          <span className="h-0.5 w-4 rounded-full" style={{ background: LOW_COLOR }} />
+          <span
+            className="h-0.5 w-4 rounded-full"
+            style={{ background: LOW_COLOR }}
+          />
           Priced $200 low
         </span>
       </div>
@@ -122,7 +128,9 @@ function TurnoverChart() {
               key={p.year}
               x={x(p.year)}
               y={H - 8}
-              textAnchor={p.year === 0 ? 'start' : p.year === YEARS ? 'end' : 'middle'}
+              textAnchor={
+                p.year === 0 ? 'start' : p.year === YEARS ? 'end' : 'middle'
+              }
               className="fill-[#5f5e57] text-[12px]"
             >
               {p.year === 0 ? 'Move-in' : `Yr ${p.year}`}

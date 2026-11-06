@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 import { CityNotifyModal } from '@/components/city-notify-modal';
 import { Button } from '@/components/ui/button';
-import { LIVE_CITIES, listCities } from '@/lib/live-cities';
+import { listCities, LIVE_CITIES } from '@/lib/live-cities';
 
 // Homepage first screen. Merges the template hero (text over a gradient, no
 // action) and the dark "Now available" panel, so the primary action and the

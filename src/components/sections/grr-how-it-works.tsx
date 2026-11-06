@@ -28,7 +28,6 @@ const STEPS: { title: string; description: React.ReactNode }[] = [
   },
 ];
 
-
 // Privacy wording mirrors getrentready lib/rent-data-consent.ts (the upload's
 // consent step); update both together.
 // Sample rent roll for the "what we read" example. The used columns are the
@@ -36,16 +35,44 @@ const STEPS: { title: string; description: React.ReactNode }[] = [
 // lib/rent-roll-extraction-schema.ts: unit, bed/bath, sqft, rent, lease
 // dates, vacant). The skipped columns are common rent-roll fields it never saves;
 // their cells are blanked, so no tenant details appear even as samples.
-const USED_COLUMNS = ['Unit', 'Type', 'Sq ft', 'Rent', 'Lease from', 'Lease to', 'Status'];
+const USED_COLUMNS = [
+  'Unit',
+  'Type',
+  'Sq ft',
+  'Rent',
+  'Lease from',
+  'Lease to',
+  'Status',
+];
 const SKIPPED_COLUMNS = ['Tenant', 'Contact', 'Deposit', 'Balance'];
 const SAMPLE_ROWS = [
   ['101', '1BR/1BA', '650', '$2,150', '03/01/2026', '02/28/2027', 'Occupied'],
-  ['102', '2BR/1BA', '900', '$2,695', '08/15/2024', 'Month-to-month', 'Occupied'],
+  [
+    '102',
+    '2BR/1BA',
+    '900',
+    '$2,695',
+    '08/15/2024',
+    'Month-to-month',
+    'Occupied',
+  ],
   ['201', '2BR/1BA', '875', '—', '—', '—', 'Vacant'],
-  ['202', '1BR/1BA', '610', '$1,980', '06/01/2025', '05/31/2026', 'Notice given'],
+  [
+    '202',
+    '1BR/1BA',
+    '610',
+    '$1,980',
+    '06/01/2025',
+    '05/31/2026',
+    'Notice given',
+  ],
 ];
 
-function RentRollExample({ panelRef }: { panelRef: React.Ref<HTMLDivElement> }) {
+function RentRollExample({
+  panelRef,
+}: {
+  panelRef: React.Ref<HTMLDivElement>;
+}) {
   return (
     <div
       id={EXAMPLE_ID}
@@ -58,18 +85,24 @@ function RentRollExample({ panelRef }: { panelRef: React.Ref<HTMLDivElement> }) 
           What Get Rent Ready reads from a rent roll
         </h3>
         <p className="text-muted-foreground mt-3 text-base text-pretty sm:text-lg">
-          Only the fields that set rent. We don’t keep your rent roll file,
-          and only the units you review and confirm are saved to your account.
+          Only the fields that set rent. We don’t keep your rent roll file, and
+          only the units you review and confirm are saved to your account.
         </p>
       </div>
 
       <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-[#4a4a44]">
         <span className="flex items-center gap-2">
-          <span className="size-2.5 rounded-full bg-[#3D5CE8]" aria-hidden="true" />
+          <span
+            className="size-2.5 rounded-full bg-[#3D5CE8]"
+            aria-hidden="true"
+          />
           Used for your analysis
         </span>
         <span className="flex items-center gap-2">
-          <span className="size-2.5 rounded-full bg-[#C9C3B8]" aria-hidden="true" />
+          <span
+            className="size-2.5 rounded-full bg-[#C9C3B8]"
+            aria-hidden="true"
+          />
           Not saved
         </span>
       </div>
@@ -82,15 +115,23 @@ function RentRollExample({ panelRef }: { panelRef: React.Ref<HTMLDivElement> }) 
       >
         <table className="w-full min-w-[820px] text-left text-sm tabular-nums">
           <caption className="sr-only">
-            Sample rent roll. Unit, type, square feet, rent, lease dates and status are used;
-            tenant, contact, deposit and balance columns are not saved.
+            Sample rent roll. Unit, type, square feet, rent, lease dates and
+            status are used; tenant, contact, deposit and balance columns are
+            not saved.
           </caption>
           <thead>
             <tr className="border-b border-[#E5DFD4]">
               {USED_COLUMNS.map((col) => (
-                <th key={col} scope="col" className="px-3 py-3 first:pl-4 last:pr-4 font-semibold text-[#32322C]">
+                <th
+                  key={col}
+                  scope="col"
+                  className="px-3 py-3 font-semibold text-[#32322C] first:pl-4 last:pr-4"
+                >
                   <span className="flex items-center gap-2 whitespace-nowrap">
-                    <span className="size-2 rounded-full bg-[#3D5CE8]" aria-hidden="true" />
+                    <span
+                      className="size-2 rounded-full bg-[#3D5CE8]"
+                      aria-hidden="true"
+                    />
                     {col}
                   </span>
                 </th>
@@ -99,7 +140,7 @@ function RentRollExample({ panelRef }: { panelRef: React.Ref<HTMLDivElement> }) 
                 <th
                   key={col}
                   scope="col"
-                  className={`bg-[#F6F3EE] px-3 py-3 first:pl-4 last:pr-4 font-medium whitespace-nowrap text-[#6b6a62] ${i === 0 ? 'border-l border-[#E5DFD4]' : ''}`}
+                  className={`bg-[#F6F3EE] px-3 py-3 font-medium whitespace-nowrap text-[#6b6a62] first:pl-4 last:pr-4 ${i === 0 ? 'border-l border-[#E5DFD4]' : ''}`}
                 >
                   {col}
                   <span className="block text-xs font-normal">Not saved</span>
@@ -109,11 +150,14 @@ function RentRollExample({ panelRef }: { panelRef: React.Ref<HTMLDivElement> }) 
           </thead>
           <tbody>
             {SAMPLE_ROWS.map((row) => (
-              <tr key={row[0]} className="border-b border-[#EFEDE9] last:border-0">
+              <tr
+                key={row[0]}
+                className="border-b border-[#EFEDE9] last:border-0"
+              >
                 {row.map((cell, i) => (
                   <td
                     key={USED_COLUMNS[i]}
-                    className={`px-3 py-3 first:pl-4 last:pr-4 whitespace-nowrap ${i === 0 ? 'font-semibold text-[#32322C]' : 'text-[#32322C]'}`}
+                    className={`px-3 py-3 whitespace-nowrap first:pl-4 last:pr-4 ${i === 0 ? 'font-semibold text-[#32322C]' : 'text-[#32322C]'}`}
                   >
                     {cell}
                   </td>
@@ -123,7 +167,10 @@ function RentRollExample({ panelRef }: { panelRef: React.Ref<HTMLDivElement> }) 
                     key={col}
                     className={`bg-[#F6F3EE] px-3 py-3 first:pl-4 last:pr-4 ${i === 0 ? 'border-l border-[#E5DFD4]' : ''}`}
                   >
-                    <span className="block h-2.5 w-12 rounded-full bg-[#E5DFD4]" aria-hidden="true" />
+                    <span
+                      className="block h-2.5 w-12 rounded-full bg-[#E5DFD4]"
+                      aria-hidden="true"
+                    />
                     <span className="sr-only">Not saved</span>
                   </td>
                 ))}
@@ -138,8 +185,8 @@ function RentRollExample({ panelRef }: { panelRef: React.Ref<HTMLDivElement> }) 
       </p>
       <p className="mt-3 max-w-2xl text-sm text-[#4a4a44]">
         With your permission, rents are added to an anonymous, combined pool
-        with other landlords’ data, never shown on their own and never with
-        your address or unit names.
+        with other landlords’ data, never shown on their own and never with your
+        address or unit names.
       </p>
       <a
         href="/samples/sample-rent-roll.csv"
@@ -164,8 +211,13 @@ const GrrHowItWorks = () => {
       // The example renders below all three steps; on phones that is well off
       // screen, so bring it into view and move focus there.
       requestAnimationFrame(() => {
-        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        panelRef.current?.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+        const reduce = window.matchMedia(
+          '(prefers-reduced-motion: reduce)',
+        ).matches;
+        panelRef.current?.scrollIntoView({
+          behavior: reduce ? 'auto' : 'smooth',
+          block: 'start',
+        });
         panelRef.current?.focus({ preventScroll: true });
       });
     }
@@ -183,8 +235,8 @@ const GrrHowItWorks = () => {
       >
         rent roll
       </button>{' '}
-      (PDF, Excel, Word or CSV). Get Rent Ready reads every unit, rent and
-      lease date for you.
+      (PDF, Excel, Word or CSV). Get Rent Ready reads every unit, rent and lease
+      date for you.
     </>
   );
 
@@ -200,7 +252,7 @@ const GrrHowItWorks = () => {
         <ol className="mx-auto mt-12 grid max-w-5xl gap-10 md:mt-16 md:grid-cols-3 md:gap-8">
           {STEPS.map((step, i) => (
             <li key={step.title} className="border-t border-[#32322C]/15 pt-6">
-              <span className="text-sm text-[#3550D9] font-semibold tabular-nums">
+              <span className="text-sm font-semibold text-[#3550D9] tabular-nums">
                 Step {i + 1}
               </span>
               <h3 className="text-foreground mt-2 text-xl font-medium sm:text-2xl">

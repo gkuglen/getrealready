@@ -5,7 +5,7 @@ import { useEffect, useId, useRef, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { LIVE_CITIES, listCities } from '@/lib/live-cities';
+import { listCities, LIVE_CITIES } from '@/lib/live-cities';
 
 // Kept in sync by hand with the copy of this file in the getrentready repo
 // (components/city-notify-modal.tsx) — no shared package between the two
@@ -60,9 +60,7 @@ export function CityNotifyModal({
 }) {
   const [email, setEmail] = useState('');
   const [selectedCities, setSelectedCities] = useState<string[]>([]);
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success'>(
-    'idle',
-  );
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
   const [emailError, setEmailError] = useState<string | null>(null);
   const [cityError, setCityError] = useState(false);
   const [submitError, setSubmitError] = useState<SubmitError>(null);
@@ -177,7 +175,11 @@ export function CityNotifyModal({
       const res = await fetch('/api/notify-city-interest', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: trimmed, cities: selectedCities, source }),
+        body: JSON.stringify({
+          email: trimmed,
+          cities: selectedCities,
+          source,
+        }),
       });
       if (res.status === 400) {
         setStatus('idle');
@@ -220,7 +222,7 @@ export function CityNotifyModal({
         // with the on-screen keyboard open) this card can be taller than
         // the visible screen — without its own scroll, the CTA at the
         // bottom becomes unreachable rather than just off-screen.
-        className="relative flex max-h-[90vh] w-full max-w-[630px] flex-col gap-5 overflow-y-auto text-left rounded-[24px] bg-white p-6 sm:gap-6 sm:rounded-[30px] sm:p-12 md:p-[60px]"
+        className="relative flex max-h-[90vh] w-full max-w-[630px] flex-col gap-5 overflow-y-auto rounded-[24px] bg-white p-6 text-left sm:gap-6 sm:rounded-[30px] sm:p-12 md:p-[60px]"
       >
         <button
           type="button"

@@ -27,7 +27,8 @@ const caveat = Caveat({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Get Rent Ready — Set the right rent for your rental | Get Real Ready',
+    default:
+      'Get Rent Ready — Set the right rent for your rental | Get Real Ready',
     template: '%s | Get Real Ready',
   },
   description:
@@ -77,7 +78,10 @@ export default function RootLayout({
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"
         />
-        <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
+        <script
+          async
+          src="https://news.google.com/swg/js/v1/publisher.js"
+        ></script>
       </head>
       <body
         className={`hmin-h-screen ${inter.variable} ${caveat.variable} antialiased`}

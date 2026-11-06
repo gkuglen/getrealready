@@ -1,7 +1,7 @@
-import MetafiCta from '@/components/sections/matafi-cta';
 import GrrHero from '@/components/sections/grr-hero';
 import GrrHowItWorks from '@/components/sections/grr-how-it-works';
 import GrrTurnover from '@/components/sections/grr-turnover';
+import MetafiCta from '@/components/sections/matafi-cta';
 
 // Pricing-first homepage. The template's renovation/services sections
 // (metafi-integrations, -testimonials, -feature-benefits, -features-included,
