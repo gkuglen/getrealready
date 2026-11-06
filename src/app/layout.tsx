@@ -27,18 +27,18 @@ const caveat = Caveat({
 
 export const metadata: Metadata = {
   title: {
-    default:
-      'Get Real Ready — Smarter upgrades for better performing rental properties',
+    default: 'Get Rent Ready — Set the right rent for your rental | Get Real Ready',
     template: '%s | Get Real Ready',
   },
   description:
-    'We help landlords and property managers improve their units, align rents with the market, and maintain properties with a clear return on investment—without unnecessary upgrades or added complexity.',
+    'Get Rent Ready, from Get Real Ready, compares your rental to similar units nearby in Oakland, Berkeley and Alameda so you can set the right rent at turnover. Free to use.',
   keywords: [
     'rental property',
     'property management',
     'rent optimization',
     'landlord services',
-    'unit renovation',
+    'rent control',
+    'rental comps',
     'property value',
     'real estate',
   ],
@@ -57,10 +57,9 @@ export const metadata: Metadata = {
   },
   manifest: '/favicon/site.webmanifest',
   openGraph: {
-    title:
-      'Get Real Ready — Smarter upgrades for better performing rental properties',
+    title: 'Get Rent Ready — Set the right rent for your rental',
     description:
-      'We help landlords and property managers improve their units, align rents with the market, and maintain properties with a clear return on investment.',
+      'Compare your rental to similar units nearby in Oakland, Berkeley and Alameda and set the right rent at turnover. Free, from Get Real Ready.',
     siteName: 'Get Real Ready',
     images: [
       { url: '/og-image.jpg', width: 1200, height: 630, alt: 'Get Real Ready' },

@@ -12,6 +12,8 @@ export function ThemeToggle() {
     <Button
       variant="toggle"
       size="icon"
+      // 44px on touch layouts; the compact 36px only where there is a mouse-width nav.
+      className="size-11 lg:size-9"
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
     >
       <Sun className="size-4 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />

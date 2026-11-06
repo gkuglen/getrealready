@@ -124,7 +124,7 @@ const Navbar = () => {
           </div>
           {/* Hamburger */}
           <button
-            className="text-muted-foreground relative flex size-8 lg:hidden"
+            className="text-muted-foreground relative flex size-11 lg:hidden"
             onClick={() => setIsMenuOpen((v) => !v)}
             aria-expanded={isMenuOpen}
             aria-label="Toggle main menu"
@@ -187,7 +187,7 @@ const Navbar = () => {
                       : 'translate-y-2 opacity-0',
                   )}
                 >
-                  <div className="flex flex-col gap-6">
+                  <div className="flex flex-col gap-2">
                     {ITEMS.map((link) => {
                       const isActive =
                         link.href === '/'
@@ -198,7 +198,7 @@ const Navbar = () => {
                           key={link.label}
                           href={link.href}
                           className={cn(
-                            'text-lg tracking-[-0.36px] transition-colors',
+                            'flex min-h-11 items-center text-lg tracking-[-0.36px] transition-colors',
                             isActive
                               ? 'font-medium text-[#000] dark:text-white'
                               : 'text-muted-foreground',
@@ -212,7 +212,7 @@ const Navbar = () => {
                   </div>
                   <div className="mt-4 mb-6">
                     <CalendlyButton
-                      className="w-full bg-[#32322C] text-white hover:bg-[#32322C]/90"
+                      className="h-11 w-full bg-[#32322C] text-white hover:bg-[#32322C]/90"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <Calendar className="size-4" />
