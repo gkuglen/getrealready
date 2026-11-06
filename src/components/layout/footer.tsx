@@ -6,17 +6,15 @@ const columns = [
   {
     title: 'Navigate',
     links: [
-      { name: 'How It Works', href: '/' },
+      { name: 'How It Works', href: '/#grr-how-it-works' },
       { name: 'Results', href: '/results' },
-      { name: 'Pricing', href: '/pricing' },
       { name: 'About', href: '/about' },
     ],
   },
   {
     title: 'Contact',
     links: [
-      { name: 'Request a Property Review', href: '/#grr-cta' },
-      { name: 'Send Us Your Unit', href: '/#grr-cta' },
+      { name: 'Talk with Gray', href: '/#grr-cta' },
       { name: 'Email Us', href: 'mailto:gray@getrealready.com' },
     ],
   },

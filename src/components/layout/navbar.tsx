@@ -9,14 +9,14 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { CalendlyButton } from '@/components/ui/calendly-button';
 import { cn } from '@/lib/utils';
 
-import { ThemeToggle } from '../ui/theme-toggle';
 
 const HEADER_HEIGHT = 80;
 
+// Pricing is hidden while Get Rent Ready is free; /pricing still describes
+// the older consulting offer.
 const ITEMS = [
-  { label: 'How It Works', href: '/' },
+  { label: 'How It Works', href: '/#grr-how-it-works' },
   { label: 'Results', href: '/results' },
-  { label: 'Pricing', href: '/pricing' },
   { label: 'About', href: '/about' },
 ];
 
@@ -93,7 +93,7 @@ const Navbar = () => {
         <nav className="hidden items-center justify-center gap-8 lg:flex">
           {ITEMS.map((link) => {
             const isActive =
-              link.href === '/'
+              link.href.startsWith('/#')
                 ? pathname === '/'
                 : pathname.startsWith(link.href);
             return (
@@ -119,9 +119,6 @@ const Navbar = () => {
             <Calendar className="size-4" />
             Talk with Gray
           </CalendlyButton>
-          <div className="lg:block">
-            <ThemeToggle />
-          </div>
           {/* Hamburger */}
           <button
             className="text-muted-foreground relative flex size-11 lg:hidden"
@@ -190,7 +187,7 @@ const Navbar = () => {
                   <div className="flex flex-col gap-2">
                     {ITEMS.map((link) => {
                       const isActive =
-                        link.href === '/'
+                        link.href.startsWith('/#')
                           ? pathname === '/'
                           : pathname.startsWith(link.href);
                       return (

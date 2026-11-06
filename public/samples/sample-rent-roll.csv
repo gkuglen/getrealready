@@ -1,0 +1,5 @@
+Unit,Type,Sq ft,Monthly rent,Lease from,Lease to,Status
+101,1BR/1BA,650,2150,03/01/2026,02/28/2027,Occupied
+102,2BR/1BA,900,2695,08/15/2024,Month-to-month,Occupied
+201,2BR/1BA,875,,,,Vacant
+202,1BR/1BA,610,1980,06/01/2025,05/31/2026,Notice given

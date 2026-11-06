@@ -13,7 +13,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '700'],
+  weight: ['400', '500', '700', '800'],
   variable: '--font-inter',
   display: 'swap',
 });
@@ -84,8 +84,9 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          enableSystem
+          // The marketing site is designed for the light theme only (the
+          // dark hero is fixed); a visitor's saved "dark" choice no longer applies.
+          forcedTheme="light"
           disableTransitionOnChange
         >
           <Navbar />

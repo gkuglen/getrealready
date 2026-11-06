@@ -114,7 +114,7 @@ const GrrHero = () => {
     >
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
         <div className="flex flex-col items-start gap-6">
-          <p className="inline-flex items-center gap-2 rounded-full bg-[#F76F8E] px-3.5 py-1.5 text-[13px] font-semibold text-[#32322C]">
+          <p className="text-lg font-semibold text-balance text-[#F76F8E] sm:text-xl">
             Now available in {liveCityList}
           </p>
           <h1 className="text-[2.5rem] leading-[1.05] font-extrabold tracking-[-0.03em] text-balance text-white sm:text-5xl md:text-6xl">

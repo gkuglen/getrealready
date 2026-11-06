@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 const CALENDLY_URL =
   'https://calendly.com/graykuglen/getrealready-introduction?hide_event_type_details=1';
@@ -31,7 +32,8 @@ export function CalendlyButton({
     <Button
       size="sm"
       variant={variant}
-      className={className}
+      // Pill shape to match the site's other primary buttons.
+      className={cn('rounded-full', className)}
       onClick={() => {
         openCalendly();
         onClick?.();
