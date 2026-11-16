@@ -7,7 +7,6 @@ export default function AboutPage() {
   return (
     <>
       <MetafiAboutHero
-        overline="About"
         title="Why I Built This"
         subtitle="I help rental property owners make better investment decisions—so every upgrade drives cash flow and long-term value."
         showCta={false}
