@@ -1,6 +1,7 @@
 import GrrHero from '@/components/sections/grr-hero';
 import GrrHowItWorks from '@/components/sections/grr-how-it-works';
 import GrrTurnover from '@/components/sections/grr-turnover';
+import GrrVideos from '@/components/sections/grr-videos';
 import MetafiCta from '@/components/sections/matafi-cta';
 
 // Pricing-first homepage. The template's renovation/services sections
@@ -13,6 +14,8 @@ export default function Home() {
       <GrrHero />
       <GrrTurnover />
       <GrrHowItWorks />
+      {/* Proof of who a visitor would be talking to, right above the call CTA. */}
+      <GrrVideos />
       <MetafiCta
         title="Rather talk it through?"
         subtitle="In a 15-minute call, Gray walks through your unit’s comps and the rent range it supports."

@@ -38,7 +38,7 @@ export default function AboutPhotoGrid() {
 
           {/* Right-side content */}
           <div className="flex flex-col justify-center">
-            <h2 className="text-foreground text-2xl font-medium tracking-tight">
+            <h2 className="text-foreground text-2xl font-bold tracking-[-0.02em] sm:text-3xl">
               About the Founder
             </h2>
             <p className="text-muted-foreground mt-3 text-sm leading-relaxed">

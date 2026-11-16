@@ -234,8 +234,20 @@ export default function ResultsPage() {
   const project = projects[currentIndex];
 
   return (
-    <main className="bg-background min-h-screen">
+    // A div, not <main>: the root layout already wraps every page in <main>.
+    <div className="bg-background min-h-screen">
       <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        {/* Same size and weight as the homepage title (Inter 800, 60px desktop). */}
+        <header className="mx-auto max-w-4xl py-6 text-center sm:py-10 md:py-12">
+          <h1 className="text-foreground text-[2.5rem] leading-[1.05] font-extrabold tracking-[-0.03em] text-balance sm:text-5xl md:text-6xl">
+            Remodel results
+          </h1>
+          <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-base text-pretty sm:text-lg">
+            Three remodels: what changed, the rent it added, and the value it
+            created.
+          </p>
+        </header>
+
         {/* Project Tabs */}
         <nav className="border-border mb-8 flex gap-2 border-b">
           {projects.map((p, i) => (
@@ -255,9 +267,9 @@ export default function ResultsPage() {
 
         {/* Header */}
         <header className="mb-8">
-          <h1 className="text-foreground text-3xl font-bold text-balance">
+          <h2 className="text-foreground text-3xl leading-[1.1] font-bold tracking-[-0.02em] text-balance sm:text-4xl">
             {project.name}
-          </h1>
+          </h2>
           <p className="text-muted-foreground mt-2">{project.description}</p>
         </header>
 
@@ -269,10 +281,9 @@ export default function ResultsPage() {
           aspect={project.id === 'light' ? 'portrait' : 'landscape'}
         />
 
-        {/* Investment Impact */}
-        <p className="text-tagline font-caveat mb-4 text-center text-xl font-medium sm:text-2xl">
-          Investment Impact
-        </p>
+        <h3 className="text-foreground mb-4 text-xl font-bold tracking-[-0.01em]">
+          Investment impact
+        </h3>
 
         {/* Metrics Grid */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -289,7 +300,9 @@ export default function ResultsPage() {
 
         {/* Changes Section */}
         <section className="mt-10">
-          <h2 className="text-foreground text-xl font-semibold">Changes</h2>
+          <h3 className="text-foreground text-xl font-bold tracking-[-0.01em]">
+            Changes
+          </h3>
           <ul className="mt-4 space-y-2">
             {project.changes.map((change, index) => (
               <li
@@ -303,6 +316,6 @@ export default function ResultsPage() {
           </ul>
         </section>
       </div>
-    </main>
+    </div>
   );
 }

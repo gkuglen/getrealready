@@ -18,7 +18,7 @@ type MetafiAboutHeroProps = {
 };
 
 export default function MetafiAboutHero({
-  overline = 'About Us',
+  overline,
   title = 'Get to Know Metafi',
   subtitle = 'Gateway to discovering the essence of our company and the comprehensive suite of financial solutions we offer.',
   ctaHref = '/careers',
@@ -33,11 +33,15 @@ export default function MetafiAboutHero({
       <div className="container px-0 md:px-6">
         <div className="relative overflow-hidden">
           <div className="mx-auto max-w-4xl px-6 py-14 text-center sm:px-8 sm:py-18 md:py-20">
-            <p className="text-tagline font-caveat text-xl font-medium sm:text-2xl">
-              {overline}
-            </p>
+            {/* Optional, and plain: the script-font eyebrow was dropped site-wide. */}
+            {overline && (
+              <p className="text-muted-foreground mb-4 text-base font-medium">
+                {overline}
+              </p>
+            )}
 
-            <h1 className="text-foreground mt-4 text-4xl leading-tight font-medium tracking-tight text-balance sm:text-5xl md:text-[68px]">
+            {/* Same size and weight as the homepage title (Inter 800, 60px desktop). */}
+            <h1 className="text-foreground text-[2.5rem] leading-[1.05] font-extrabold tracking-[-0.03em] text-balance sm:text-5xl md:text-6xl">
               {title}
             </h1>
 

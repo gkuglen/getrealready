@@ -30,7 +30,7 @@ export default function AboutContent() {
 
         {/* Background */}
         <section className="mt-16">
-          <h2 className="text-foreground text-2xl font-medium tracking-tight">
+          <h2 className="text-foreground text-2xl font-bold tracking-[-0.02em] sm:text-3xl">
             Background
           </h2>
           <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
@@ -108,7 +108,7 @@ export default function AboutContent() {
 
         {/* Ongoing Work */}
         <section className="mt-16">
-          <h2 className="text-foreground text-2xl font-medium tracking-tight">
+          <h2 className="text-foreground text-2xl font-bold tracking-[-0.02em] sm:text-3xl">
             Ongoing Work
           </h2>
           <div className="mt-4 flex items-start gap-4">
@@ -129,7 +129,7 @@ export default function AboutContent() {
 
         {/* Perspective */}
         <section className="mt-16">
-          <h2 className="text-foreground text-2xl font-medium tracking-tight">
+          <h2 className="text-foreground text-2xl font-bold tracking-[-0.02em] sm:text-3xl">
             Perspective
           </h2>
           <ul className="text-muted-foreground mt-4 space-y-3 text-sm leading-relaxed">
@@ -156,7 +156,7 @@ export default function AboutContent() {
 
         {/* Selected Work */}
         <section className="mt-16">
-          <h2 className="text-foreground text-2xl font-medium tracking-tight">
+          <h2 className="text-foreground text-2xl font-bold tracking-[-0.02em] sm:text-3xl">
             Selected Work
           </h2>
           <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
