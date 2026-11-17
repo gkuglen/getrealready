@@ -15,9 +15,7 @@ const projects = [
     metrics: [
       {
         label: 'Rent Increase',
-        value: '+$410',
-        change: '+14%',
-        changeType: 'positive' as const,
+        value: '+14%',
       },
       {
         label: 'Leased in',
@@ -103,9 +101,7 @@ const projects = [
     metrics: [
       {
         label: 'Rent Increase',
-        value: '+$350',
-        change: '+16.6%',
-        changeType: 'positive' as const,
+        value: '+16.6%',
       },
       {
         label: 'Leased in',
@@ -184,9 +180,7 @@ const projects = [
     metrics: [
       {
         label: 'Rent Increase',
-        value: '$150',
-        change: '+3%',
-        changeType: 'positive' as const,
+        value: '+3%',
       },
       {
         label: 'Leased in',
