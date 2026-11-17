@@ -13,49 +13,39 @@ import { listCities, LIVE_CITIES } from '@/lib/live-cities';
 // product's own picture — current rent vs the target nearby rentals support —
 // are both visible without scrolling.
 
-// Illustrative sample, the same figures as the preview card on /tool
-// (getrentready app/tool/page.tsx). Labelled "Example" on screen.
+// Illustrative sample, derived from the preview card on /tool (getrentready
+// app/tool/page.tsx). Shown as percentages, with no city or street names, so
+// it reads the same in any rent market. Labelled "Example" on screen.
 const EXAMPLE_PROPERTIES = [
-  { address: '1420 Telegraph Ave', units: 2, current: 4900, target: 5310 },
-  { address: '388 Grand Ave', units: 5, current: 10450, target: 13886 },
-  { address: '2711 MacArthur Blvd', units: 15, current: 26100, target: 37475 },
+  { name: 'Duplex', current: 4900, target: 5310 },
+  { name: '5-unit building', current: 10450, target: 13886 },
+  { name: '15-unit building', current: 26100, target: 37475 },
 ];
 
-const usd = (n: number) =>
-  new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0,
-  }).format(n);
+const upsidePct = (current: number, target: number) =>
+  Math.round(((target - current) / current) * 100);
 
 function ExampleRentCard() {
-  const totalUpside = EXAMPLE_PROPERTIES.reduce(
-    (sum, p) => sum + (p.target - p.current),
-    0,
-  );
+  const totalCurrent = EXAMPLE_PROPERTIES.reduce((s, p) => s + p.current, 0);
+  const totalTarget = EXAMPLE_PROPERTIES.reduce((s, p) => s + p.target, 0);
   return (
     <figure
-      aria-label="Example: current rents compared with target rents for three sample Oakland properties"
+      aria-label="Example: current rents compared with target rents for three sample properties, as percentages"
       className="flex w-full flex-col gap-6 rounded-2xl bg-[#F6F3EE] p-6 text-left text-[#32322C] sm:p-7"
     >
       <figcaption className="flex items-baseline justify-between gap-3">
-        <span className="text-sm font-bold">Example · Oakland, CA</span>
+        <span className="text-sm font-bold">Example</span>
         <span className="text-[13px] text-[#5f5e57]">Sample figures</span>
       </figcaption>
       <ul className="flex flex-col gap-5">
         {EXAMPLE_PROPERTIES.map((p) => {
           const axisMax = p.target * 1.12;
           return (
-            <li key={p.address} className="flex flex-col gap-2">
+            <li key={p.name} className="flex flex-col gap-2">
               <div className="flex items-baseline justify-between gap-3">
-                <span className="text-[15px] font-bold">
-                  {p.address}{' '}
-                  <span className="font-medium text-[#5f5e57]">
-                    {p.units} units
-                  </span>
-                </span>
+                <span className="text-[15px] font-bold">{p.name}</span>
                 <span className="text-base font-extrabold whitespace-nowrap text-[#3550D9] tabular-nums">
-                  +{usd(p.target - p.current)}
+                  +{upsidePct(p.current, p.target)}%
                 </span>
               </div>
               <div
@@ -72,32 +62,18 @@ function ExampleRentCard() {
                 />
               </div>
               <div className="flex justify-between text-[13px] font-medium text-[#5f5e57] tabular-nums">
-                <span>Current {usd(p.current)}</span>
-                <span>Target {usd(p.target)}</span>
+                <span>Current rent</span>
+                <span>Target rent</span>
               </div>
             </li>
           );
         })}
       </ul>
-      <div className="flex items-end justify-between gap-4 border-t border-[#E5DFD4] pt-5">
-        <div className="flex flex-wrap gap-4 text-[13px] font-medium text-[#5f5e57]">
-          <span className="flex items-center gap-2">
-            <span className="h-2 w-3.5 rounded-full bg-[#4D6CFA]" /> Current
-            rents
-          </span>
-          <span className="flex items-center gap-2">
-            <span className="h-3 w-1 rounded-sm bg-[#1A1A1A]" /> Target
-          </span>
-        </div>
-        <div className="flex flex-col items-end">
-          <span className="text-xs font-semibold text-[#5f5e57]">
-            Total upside
-          </span>
-          <span className="text-2xl font-extrabold tracking-[-0.02em] tabular-nums">
-            {usd(totalUpside)}
-            <span className="text-sm font-semibold text-[#5f5e57]">/mo</span>
-          </span>
-        </div>
+      <div className="flex items-baseline justify-between gap-4 border-t border-[#E5DFD4] pt-5">
+        <span className="text-[15px] font-bold">Total rent upside</span>
+        <span className="text-2xl font-extrabold tracking-[-0.02em] tabular-nums">
+          +{upsidePct(totalCurrent, totalTarget)}%
+        </span>
       </div>
     </figure>
   );
