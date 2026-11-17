@@ -21,12 +21,30 @@ const nextConfig: NextConfig = {
   // whatever domain is in the browser's address bar. /rubric-scoring (an
   // internal debug page) is deliberately NOT proxied — stays reachable only
   // on the tool's own getrentready.vercel.app domain.
+  // The template's Metafi blog was removed on 2026-11-17. Send old links
+  // (including posts search engines may have indexed) to the homepage.
+  // Temporary (307), so /blog is free to come back with real posts.
+  async redirects() {
+    return [
+      { source: '/blog', destination: '/', permanent: false },
+      { source: '/blog/:path*', destination: '/', permanent: false },
+    ];
+  },
   async rewrites() {
     return [
       { source: '/tool', destination: 'https://getrentready.vercel.app/tool' },
-      { source: '/tool/:path*', destination: 'https://getrentready.vercel.app/tool/:path*' },
-      { source: '/report/:path*', destination: 'https://getrentready.vercel.app/report/:path*' },
-      { source: '/api/:path*', destination: 'https://getrentready.vercel.app/api/:path*' },
+      {
+        source: '/tool/:path*',
+        destination: 'https://getrentready.vercel.app/tool/:path*',
+      },
+      {
+        source: '/report/:path*',
+        destination: 'https://getrentready.vercel.app/report/:path*',
+      },
+      {
+        source: '/api/:path*',
+        destination: 'https://getrentready.vercel.app/api/:path*',
+      },
     ];
   },
 };

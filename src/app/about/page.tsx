@@ -8,7 +8,7 @@ export default function AboutPage() {
     <>
       <MetafiAboutHero
         title="Why I Built This"
-        subtitle="I help rental property owners make better investment decisions—so every upgrade drives cash flow and long-term value."
+        subtitle="I help rental property owners price their units to the market, and know which upgrades are worth it before they spend."
         showCta={false}
         showImage={false}
       />

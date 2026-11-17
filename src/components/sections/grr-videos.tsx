@@ -152,11 +152,12 @@ const GrrVideos = () => {
             id="grr-videos-title"
             className="text-foreground text-3xl leading-[1.1] font-bold tracking-[-0.02em] text-balance sm:text-4xl md:text-5xl"
           >
-            A 2BR remodel, by the numbers
+            A 2BR remodel: 14% more rent, leased in 14 days
           </h2>
           <p className="text-muted-foreground mt-4 text-base text-pretty sm:text-lg">
-            Four short videos on remodeling a 2BR apartment, and using gross
-            rent multiplier (GRM) and cap rate to estimate the value it created.
+            A kitchen and bath remodel raised the rent 14%. Four short videos
+            walk through the work and the math, using gross rent multiplier
+            (GRM) and cap rate to estimate the value it created.
           </p>
         </div>
         <ul className="mt-10 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
